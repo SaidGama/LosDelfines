@@ -1,15 +1,36 @@
 
+header{
+    margin: 0.5em 3em 0em 0em;
+    padding: 0.5em 2em;
+}
+
 
 article{
     margin: 0.5em 3em 0em 0em;
     padding: 0.5em 2em;
-    background-color: crimson;
-    border: 10px solid black;
 }
 
 section{
-    width: 70%;
-    background-color: cornflowerblue;
+    width: 40%;
     float: left;
     margin: 10px;
+}
+
+/* .portada{
+    position: absolute;
+    width: 1360px;
+    height: 318px;
+    left: 0px;
+    top: 300px;
+    
+    background: url(/src/agua-purificada.jpg);
+} */
+
+
+.fotosizquierda {
+    position: absolute;
+width: 542px;
+height: 450px;
+left: 751px;
+top: 618px;
 }
