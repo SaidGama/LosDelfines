@@ -56,12 +56,12 @@ nav{
     background-repeat: repeat-x;
     -webkit-background-clip: text;
     animation: animate 60s linear infinite;
-
 }
 
 .tituloEquipo{
     width: 100%;
     padding-left: 100px;
+    color: #3D71BB;
 }
 .tablaEquipo{
     display: flex;
