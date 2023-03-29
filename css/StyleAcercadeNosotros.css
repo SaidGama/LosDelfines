@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 header{
     margin: 0.5em 3em 0em 0em;
@@ -14,6 +15,7 @@ section{
     width: 40%;
     float: left;
     margin: 10px;
+<<<<<<< HEAD
 }
 
 /* .portada{
@@ -33,4 +35,17 @@ width: 542px;
 height: 450px;
 left: 751px;
 top: 618px;
+=======
+=======
+.bg-footer {
+    background-color: #3D71BB;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    padding-top: 10%;
+>>>>>>> nabvarMAAMDO
+>>>>>>> 4d6b1bb438722eb57aa3b6d504e1aa669b611ec4
 }
