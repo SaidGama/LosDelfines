@@ -1,12 +1,28 @@
 /* CSS NAVBAR */
-nav {
-
+nav{
+   
     background-color: #3d71bb;
-    height: 200px;
+    height: 270px;
+ }
+ 
+.logo{
+    width: 370px;
+    height: 172px;
+    position: absolute;
+    bottom: 125px;
 }
 
-.logo {}
-
+.enlaces{
+    position: absolute;
+    top: 200px;
+    justify-content: center;
+}
+#carrito{
+    padding: 10px;
+}
+#login{
+    padding: 10px;
+}
 
 
 /* CSS CONTENIDO */
@@ -71,11 +87,6 @@ nav {
     }
 
 }
-
-
-
-
-
 
 
 /* CSS FOOTER */
