@@ -1,55 +1,91 @@
-nav{
-   
+/* CSS NAVBAR */
+nav {
+
     background-color: #3d71bb;
     height: 200px;
- }
- 
-.logo{
-    
 }
 
+.logo {}
+
+
+
+/* CSS CONTENIDO */
+.imagenportada {
+    position: relative;
+}
+
+.imagenportada img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.resumen {
+    display: flex;
+    width: 100%;
+}
+
+.articulo1,
+.articulo2 {
+    width: 50%;
+    margin: 10px;
+    padding: 100px;
+}
+
+.loader h1 {
+    text-decoration: uppercase;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.186);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhT9AXpUqUyMjILJ9qn9PDvXpdXE-iqbc-HMXHfU04s6rJ0fbT);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: animate 60s linear infinite;
+
+}
+
+.tituloEquipo{
+    width: 100%;
+    padding-left: 100px;
+}
+.tablaEquipo{
+    display: flex;
+    width: 100%;
+}
+.columna1,
+.columna2 {
+    width: 50%;
+    margin: 10px;
+    padding: 100px;
+}
+@keyframes animate {
+    0% {
+        background-position: left 0px top 80px;
+    }
+
+    40% {
+        background-position: left 800px top -50px;
+    }
+
+    80% {
+        background-position: left 400px top -50px;
+    }
+
+}
+
+
+
+
+
+
+
+/* CSS FOOTER */
 .bg-footer {
     background-color: #3D71BB;
 }
+
 #footer {
     position: relative;
     bottom: 0;
     width: 100%;
     margin: auto;
-}
-
-header{
-    margin: 0.5em 3em 0em 0em;
-    padding: 0.5em 2em;
-}
-
-
-article{
-    margin: 0.5em 3em 0em 0em;
-    padding: 0.5em 2em;
-}
-
-section{
-    width: 40%;
-    float: left;
-    margin: 10px;
-}
-
-/* .portada{
-    position: absolute;
-    width: 1360px;
-    height: 318px;
-    left: 0px;
-    top: 300px;
-    
-    background: url(/src/agua-purificada.jpg);
-} */
-
-
-.fotosizquierda {
-    position: absolute;
-width: 542px;
-height: 450px;
-left: 751px;
-top: 618px;
 }
