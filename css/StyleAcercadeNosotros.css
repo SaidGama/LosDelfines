@@ -1,87 +1,51 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;;
+    margin: 0;
 }
-body{ min-height: 100%;}
-html{ height: 100%;}
+
+body {
+    min-height: 100%;
+}
+
+html {
+    height: 100%;
+}
 
 
 
 /* CSS NAVBAR */
-.navbar{
-    grid-area: navbar;
-    background-color: #3d71bb;
-    height: 270px;
- }
- 
-.logo{
+
+
+.logo {
     width: 370px;
     height: 172px;
     position: absolute;
     bottom: 125px;
 }
-.enlaces{
+
+.enlaces {
     position: absolute;
     top: 200px;
     justify-content: center;
 }
-#carrito{
-    padding: 10px;
-}
-#login{
+
+#carrito {
     padding: 10px;
 }
 
+#login {
+    padding: 10px;
+}
+
+/* CSS FOOTER */
+.bg-footer {
+    background-color: #3D71BB;
+}
 
 /* CSS CONTENIDO */
-.imagenportada {
-    position: relative;
-    size-adjust: inherit;
-}
-.imagenportada img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
 
-.resumen {
-    display: flex;
-    width: 100%;
-}
 
-.articulo1,
-.articulo2 {
-    width: 50%;
-    margin: 10px;
-    padding: 100px;
-}
-
-.loader h1 {
-    text-decoration: uppercase;
-    font-size: 60px;
-    color: rgba(255, 255, 255, 0.186);
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhT9AXpUqUyMjILJ9qn9PDvXpdXE-iqbc-HMXHfU04s6rJ0fbT);
-    background-repeat: repeat-x;
-    -webkit-background-clip: text;
-    animation: animate 60s linear infinite;
-}
-
-.tituloEquipo{
-    width: 100%;
-    padding-left: 100px;
-    color: #3D71BB;
-}
-.tablaEquipo{
-    display: flex;
-    width: 100%;
-}
-.columna1,
-.columna2 {
-    width: 50%;
-    margin: 10px;
-    padding: 100px;
-}
 @keyframes animate {
     0% {
         background-position: left 0px top 80px;
@@ -97,19 +61,41 @@ html{ height: 100%;}
 
 }
 
-.main{
-    grid-area: main;
+.navbar {
+    grid-area: navbar;
+    background-color: #3d71bb;
+    height: 270px;
 }
-/* CSS FOOTER */
-.bg-footer {
-    background-color: #3D71BB;
+.imagenportada {
+    grid-area: imagenportada;
+    width: 100%;
 }
-
+.articulo1 {
+    grid-area: articulo1;
+}
+.articulo2 {
+    grid-area: articulo2;
+    width: 100%;
+}
+.tituloEquipo {
+    grid-area: tituloEquipo;
+}
+.columna1 {
+    grid-area: columna1;
+}
+.columna2 {
+    grid-area: columna2;
+}
 .footer1 {
     grid-area: footer1;
 }
+
+.facebook{
+    width: 100%;
+}
 /*VistaCelular*/
-.grid-container{
-    display: grid;
-    grid-template-areas: "navbar" "main" "footer1";
+.grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: 20% auto auto auto auto auto auto auto;
+    grid-template-areas: "navbar" "imagenportada" "articulo1" "articulo2" "tituloEquipo" "columna1" "columna2" "footer1";
 }
