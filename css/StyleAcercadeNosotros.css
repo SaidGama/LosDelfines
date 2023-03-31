@@ -21,7 +21,6 @@ html{ height: 100%;}
     position: absolute;
     bottom: 125px;
 }
-
 .enlaces{
     position: absolute;
     top: 200px;
@@ -38,8 +37,8 @@ html{ height: 100%;}
 /* CSS CONTENIDO */
 .imagenportada {
     position: relative;
+    size-adjust: inherit;
 }
-
 .imagenportada img {
     width: 100%;
     height: auto;
