@@ -14,8 +14,6 @@ html {
 }
 
 /* CSS NAVBAR */
-
-
 .logo {
     width: 370px;
     height: 172px;
@@ -28,7 +26,6 @@ html {
     top: 200px;
     justify-content: center;
 }
-
 #carrito {
     padding: 10px;
 }
@@ -60,6 +57,7 @@ html {
 
 }
 
+
 .navbar {
     grid-area: navbar;
     background-color: #3d71bb;
@@ -68,6 +66,8 @@ html {
 }
 .imagenportada {
     grid-area: imagenportada;
+}
+.fotoportada{
     width: 100%;
 }
 .articulo1 {
@@ -76,6 +76,8 @@ html {
 }
 .articulo2 {
     grid-area: articulo2;
+}
+.Fotoizquierda{
     width: 100%;
 }
 .tituloEquipo {
@@ -91,10 +93,8 @@ html {
     grid-area: footer1;
 }
 
-.facebook{
-    width: 100%;
-}
 /*VistaCelular*/
+<<<<<<< HEAD
 .grid-container {
     grid-template-columns: auto;
     grid-template-rows: 20% auto auto auto auto auto auto auto;
@@ -114,4 +114,39 @@ html {
     grid-area:whatsapp;
     width: auto;
     height:auto;
+=======
+@media(max-width: 899px){
+    .grid-container {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'navbar'
+            'imagenportada'
+            'articulo1'
+            'articulo2'
+            'tituloEquipo'
+            'columna1'
+            'columna2'
+            'footer1';
+        gap: 0px;
+        height: 100%;
+    }
+}
+/*Escritorio*/
+@media(min-width:900px) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            'navbar navbar'
+            'imagenportada imagenportada'
+            'articulo1 articulo2'
+            'tituloEquipo tituloEquipo'
+            'columna1 columna2'
+            'columna1 columna2'
+            'footer1 footer1';
+    }
+>>>>>>> e7df62945c81e177ee3d54f97ea369a8f72a2f4b
 }
