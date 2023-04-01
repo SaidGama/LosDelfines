@@ -94,12 +94,13 @@ html {
 }
 
 /*VistaCelular*/
-<<<<<<< HEAD
+
 .grid-container {
     grid-template-columns: auto;
     grid-template-rows: 20% auto auto auto auto auto auto auto;
     grid-template-areas: "navbar" "imagenportada" "articulo1" "articulo2" "tituloEquipo" "columna1" "columna2" "footer1";
 }
+
 .facebook{
     grid-area:facebook;
     width: auto;
@@ -114,7 +115,7 @@ html {
     grid-area:whatsapp;
     width: auto;
     height:auto;
-=======
+}
 @media(max-width: 899px){
     .grid-container {
         display: grid;
@@ -148,5 +149,4 @@ html {
             'columna1 columna2'
             'footer1 footer1';
     }
->>>>>>> e7df62945c81e177ee3d54f97ea369a8f72a2f4b
-}
+};
