@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
 
 body {
@@ -11,8 +12,6 @@ body {
 html {
     height: 100%;
 }
-
-
 
 /* CSS NAVBAR */
 
@@ -65,6 +64,7 @@ html {
     grid-area: navbar;
     background-color: #3d71bb;
     height: 270px;
+   
 }
 .imagenportada {
     grid-area: imagenportada;
@@ -72,6 +72,7 @@ html {
 }
 .articulo1 {
     grid-area: articulo1;
+   
 }
 .articulo2 {
     grid-area: articulo2;
@@ -98,4 +99,19 @@ html {
     grid-template-columns: auto;
     grid-template-rows: 20% auto auto auto auto auto auto auto;
     grid-template-areas: "navbar" "imagenportada" "articulo1" "articulo2" "tituloEquipo" "columna1" "columna2" "footer1";
+}
+.facebook{
+    grid-area:facebook;
+    width: auto;
+    height:auto;
+}
+.instagram{
+    grid-area: instagram;
+    width: auto;
+    height:auto;
+}
+.whatsapp{
+    grid-area:whatsapp;
+    width: auto;
+    height:auto;
 }
