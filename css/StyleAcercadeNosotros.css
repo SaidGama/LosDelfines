@@ -27,6 +27,7 @@ html {
     top: 200px;
     justify-content: center;
 }
+
 #carrito {
     padding: 10px;
 }
@@ -64,36 +65,50 @@ html {
     background-color: #3d71bb;
     height: 270px;
 }
+
 .imagenportada {
     grid-area: imagenportada;
 }
-.fotoportada{
+
+.fotoportada {
     width: 100%;
 }
+
 .articulo1 {
     grid-area: articulo1;
+    padding: 30px;
 }
+
 .articulo2 {
     grid-area: articulo2;
+    padding-left: 20px;
 }
-.Fotoizquierda{
+
+.Fotoizquierda {
     width: 100%;
 }
+
 .tituloEquipo {
     grid-area: tituloEquipo;
+    padding: 30px;
 }
+
 .columna1 {
     grid-area: columna1;
+    padding: 18px;
 }
+
 .columna2 {
     grid-area: columna2;
+    padding: 18px;
 }
+
 .footer1 {
     grid-area: footer1;
 }
 
 /*VistaCelular*/
-@media(max-width: 899px){
+@media(max-width: 899px) {
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto auto auto auto auto;
@@ -111,6 +126,7 @@ html {
         height: 100%;
     }
 }
+
 /*Escritorio*/
 @media(min-width:900px) {
     .grid-container {
@@ -126,4 +142,39 @@ html {
             'columna1 columna2'
             'footer1 footer1';
     }
+}
+
+  @media(max-width: 899px) {
+    .footer1 {
+        display: grid;
+
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+
+        grid-template-areas:
+            'columnaF1 columnaF2';
+
+        gap: 0px;
+        height: 100%;        
+    }
+
+    .nav-item{
+        display: none;
+    }
+} 
+
+ .facebook {
+    grid-area: facebook;
+    width: auto;
+    height: auto;
+}
+.instagram {
+    grid-area: instagram;
+    width: auto;
+    height: auto;
+}
+.whatsapp {
+    grid-area: whatsapp;
+    width: auto;
+    height: auto;
 }
