@@ -14,14 +14,11 @@ html {
     font-family:Poppins;
 }
 
-<<<<<<< HEAD
-=======
 a {
     text-decoration: none;
     color: white;
 }
 
->>>>>>> b72c26a4a83f5a951d81d2bb9d24b45786daeb53
 /* CSS NAVBAR */
 .img-container {
     grid-area: img-container;
@@ -78,11 +75,8 @@ a {
     grid-area: navbar;
     background-color: #3d71bb;
     height: 270px;
-<<<<<<< HEAD
    
-=======
     width: 100%;
->>>>>>> b72c26a4a83f5a951d81d2bb9d24b45786daeb53
 }
 
 .imagenportada {
@@ -96,14 +90,10 @@ a {
 .articulo1 {
 
     grid-area: articulo1;
-<<<<<<< HEAD
     padding: 30px;
     font-family:Poppins ;
-    
-=======
     padding-left: 10%;
     padding-right: 10%;
->>>>>>> b72c26a4a83f5a951d81d2bb9d24b45786daeb53
 }
 
 .articulo2 {
@@ -130,13 +120,10 @@ a {
 
 .columna2 {
     grid-area: columna2;
-<<<<<<< HEAD
     padding: 18px;
-    
-=======
     padding-left: 10%;
     padding-right: 10%;
->>>>>>> b72c26a4a83f5a951d81d2bb9d24b45786daeb53
+
 }
 
 .footer1 {
