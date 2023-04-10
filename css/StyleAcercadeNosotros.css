@@ -20,12 +20,24 @@ html {
     height: 172px;
     position: absolute;
     bottom: 125px;
+    grid-area: logo;
 }
-
+.enlaces-container{
+    position: absolute;
+    top: 200px;
+    justify-content: center;
+    grid-area: enlaces-container ;
+    width: 100%;
+}
 .enlaces {
     position: absolute;
     top: 200px;
     justify-content: center;
+    grid-area: enlaces-container ;
+    width: 100%;
+}
+.registro-container{
+grid-area: registro-container;
 }
 #carrito {
     padding: 10px;
@@ -63,6 +75,7 @@ html {
     grid-area: navbar;
     background-color: #3d71bb;
     height: 270px;
+    width: 100%;
 }
 .imagenportada {
     grid-area: imagenportada;
@@ -125,5 +138,16 @@ html {
             'columna1 columna2'
             'columna1 columna2'
             'footer1 footer1';
+    }
+}
+
+@media (min-width:900px) {
+    .container-fluid{
+        display:grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-areas: 
+            '. logo logo logo registro-container'
+            'enlaces-container enlaces-container registro-container';
     }
 }
