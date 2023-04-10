@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+
+/* CSS NAVBAR */
+.logo {
+    width: 370px;
+    height: 172px;
+    position: absolute;
+    bottom: 125px;
+}
+
+.enlaces {
+    position: absolute;
+    top: 200px;
+    justify-content: center;
+}
+
+#carrito {
+    padding: 10px;
+}
+
+#login {
+    padding: 10px;
+}
+.bg-footer {
+    background-color: #3D71BB;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: #3d71bb;
+    height: 270px;
+}
+
+/*CSS CONTENIDO*/
+
+
+.formulario{
+    grid-area: formulario;
+}
+.informacion{
+    grid-area: informacion;
+}
+
+/*VistaCelular*/
+@media(max-width: 899px) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'navbar'
+            'imagenportada'
+            'formulario'
+            'informacion'
+            'footer1';
+        gap: 0px;
+        height: 100%;
+    }
+}
+
+/*Escritorio*/
+@media(min-width:900px) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            'navbar navbar'
+            'imagenportada imagenportada'
+            'formulario  informacion'
+            'footer1 footer1';
+        gap: 0px;
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*css footer no tocar xd*/
+
+
+.footer1 {
+    grid-area: footer1;
+}
+  @media(max-width: 899px) {
+    .footer1 {
+        display: grid;
+
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+
+        grid-template-areas:
+            'columnaF1 columnaF2';
+
+        gap: 0px;
+        height: 100%;        
+    }
+
+    .nav-item{
+        display: none;
+    }
+} 
+
+ .facebook {
+    grid-area: facebook;
+    width: auto;
+    height: auto;
+}
+.instagram {
+    grid-area: instagram;
+    width: auto;
+    height: auto;
+}
+.whatsapp {
+    grid-area: whatsapp;
+    width: auto;
+    height: auto;
+}
