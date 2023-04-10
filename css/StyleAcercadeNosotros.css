@@ -12,28 +12,37 @@ html {
     height: 100%;
 }
 
-
+a {
+    text-decoration: none;
+    color: white;
+}
 
 /* CSS NAVBAR */
-.logo {
-    width: 370px;
-    height: 172px;
-    position: absolute;
-    bottom: 125px;
+.img-container {
+    grid-area: img-container;
+    padding: 15px;
+}
+.enlaces-container {
+    grid-area: enlaces-container;
+
+}
+.login-container {
+    grid-area: login-container;
+}
+.lista{
+ list-style-type: none;
+ display: inline;
+ object-fit: contain;
 }
 
-.enlaces {
-    position: absolute;
-    top: 200px;
-    justify-content: center;
+#login{
+    width: 30px;
+    height: 50px;
+    padding-bottom: 15px;
 }
-
-#carrito {
-    padding: 10px;
-}
-
-#login {
-    padding: 10px;
+#carrito{
+    width: 30px;
+    height: 40px;
 }
 
 /* CSS FOOTER */
@@ -64,6 +73,7 @@ html {
     grid-area: navbar;
     background-color: #3d71bb;
     height: 270px;
+    width: 100%;
 }
 
 .imagenportada {
@@ -191,4 +201,16 @@ html {
     grid-area: whatsapp;
     width: auto;
     height: auto;
+}
+
+@media(min-width:900px) {
+    .navbar{
+        display: grid;
+        grid-template-rows:60% 40%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+        grid-template-areas: 
+        '. img-container img-container img-container login-container'
+        '. enlaces-container enlaces-container enlaces-container login-container';
+    }
 }
