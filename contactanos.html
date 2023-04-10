@@ -14,42 +14,26 @@
 
 <body class="grid-container">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container" style="display: flex; justify-content: center; ">
-            <img src="./img/Group 13LogoLosD.png" alt="logodelfines" class="logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 enlaces container">
-                    <li class="nav-item">
-                        <a class="nav-link texto" href="#" style="color: white;">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link texto" href="#" style="color: white;">¿Quienes Somos?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link texto" href="#" style="color: white;">Nuestros Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link texto" href="#" style="color: white;">Contáctanos</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <ul class="nav flex-column">
-                    <li class="nav-item" id="login">
-                        <a href="#" target="_blank"><img src="./img/Vectorlogin.png" alt="Iniciodesesion" width="30px"
-                                height="30px"></a>
-                    </li>
-                    <li class="nav-item" id="carrito">
-                        <a href="#" target="_blank"><img src="./img/Vectorcarrito.png" alt="Carrito de compras"
-                                width="30px" height="30px"></a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="img-container">
+            <img src="./img/Group 13LogoLosD.png" alt="LogoDelfines"
+                style="width: 100%; height: 170px; object-fit: contain;">
+        </div>
+        <div class="enlaces-container" style="text-align: center;">
+            <a href="#" style="padding-left: 20px;">Productos</a>
+            <a href="#" style="padding-left: 20px;">¿Quiénes Somos?</a>
+            <a href="#" style="padding-left: 20px;">Nuestros servicios</a>
+            <a href="#" style="padding-left: 20px;">Contáctanos</a>
+        </div>
+        <div class="login-container" style=" text-align: center;">
+            <ul class="lista">
+                <li>
+                    <a href="#"><img src="./img/Vectorlogin.png" alt="login" id="login"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/Vectorcarrito.png" alt="carrito" id="carrito"></a>
+                </li>
+            </ul>
         </div>
     </nav>
     <!-- CONTENIDO -->
@@ -73,23 +57,24 @@
     </div>
     <!-- FOOTER -->
     <footer class="footer1 row align-items-center p-3 mb-2 bg-footer text-white">
-        <div class="columnaF1">
-            <div class="col mb-3">
-            </div>
-            <div class="col mb-3">
-                <h5>Soporte</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">exclusive@gmail.com</a></li>
-                    <li class="nav-item mb-2">+88015-88888-9999<a href="#" class="nav-link p-0 text-white"></a></li>
-                </ul>
-            </div>
-            <div class="col mb-3">
-                <h5>Cuenta</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2">Mi cuenta<a href="#" class="nav-link p-0 text-white"></a></li>
-                    <li class="nav-item mb-2">Ingresar/Registro<a href="#" class="nav-link p-0 text-white"></a></li>
-                    <li class="nav-item mb-2">Carrito<a href="#" class="nav-link p-0 text-white"></a></li>
+        
+        <div class="col1 mb-3">
+        </div>
+        <div class="col2 mb-3">
+            <h5>Soporte</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">exclusive@gmail.com</a></li>
+                <li class="nav-item mb-2">+88015-88888-9999<a href="#" class="nav-link p-0 text-white"></a></li>
+            </ul>
+        </div>
+        <div class="col3 mb-3">
+            <h5>Cuenta</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">Mi cuenta<a href="#" class="nav-link p-0 text-white"></a></li>
+                <li class="nav-item mb-2">Ingresar/Registro<a href="#" class="nav-link p-0 text-white"></a></li>
+                <li class="nav-item mb-2">Carrito<a href="#" class="nav-link p-0 text-white"></a></li>
 
+<<<<<<< HEAD
                 </ul>
             </div>
             <div class="col mb-3">
@@ -113,6 +98,29 @@
             </div>
         </div> 
     </footer>
+=======
+            </ul>
+        </div>
+        <div class="col4 mb-3">
+            <h5>Información</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Políticas de privacidad</a>
+                </li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Términos de uso</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="col5 mb-3">
+            <h5>Redes Sociales</h5>
+            <img src="./img/Facebook.png" alt="Icono" width="50px" height="50px" id="facebook" class="facebook">
+            <img src="./img/icon-instagram.png" alt="Icono" width="50px" height="50px" class="instagram">
+            <img src="./img/whatsapp.png" alt="Icono" width="50px" height="50px" class="whatsapp">
+        </div>
+        <div class="col6 mb-3">
+        </div>
+
+</footer>
+>>>>>>> b0ecddb33c31006de265432908fa8fbe21c07260
 
     <script src="js/contactanos.js"></script>
     <!--Scripts de Bootstrap  -->

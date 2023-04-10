@@ -174,16 +174,45 @@ a {
         gap: 0px;
         height: 100%;
     }
+
     .columna1 {
         grid-area: columna1;
-        
-        
+
+
     }
+
     .columna2 {
         grid-area: columna2;
-        
+
     }
+
+    /* footer */
+    .footer1 {
+        display: grid; 
+
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        
+        grid-template-areas: 
+         'col2 col1'
+         'col3 col5'
+         'col4 col6';
+        
+        gap: 0px;
+        height: 100%;
+
+
+    } /* Grid Footer */
+
+
+    .nav-item {
+        display: none;
+    }
+
+    /* footer */
 }
+
+
 
 /*Escritorio*/
 @media(min-width:900px) {
@@ -200,6 +229,7 @@ a {
             'columna1 columna2'
             'footer1 footer1';
     }
+<<<<<<< HEAD
 
 }
 
@@ -216,11 +246,56 @@ a {
             gap: 0px;
         height: 100%;        
     }
+=======
 
-    .nav-item{
-        display: none;
-    }
-} 
+    .footer1 {
+        display: grid;
+
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        grid-template-areas:
+            'col1 col2 col3 col4 col5 col6';
+
+        gap: 0px;
+        height: 100%;
+>>>>>>> b0ecddb33c31006de265432908fa8fbe21c07260
+
+    }    /* Grid Footer */
+
+}
+
+
+.col1 {
+    grid-area: col1;
+    padding: auto;
+}
+
+.col2 {
+    grid-area: col2;
+    padding: auto;
+}
+
+.col3 {
+    grid-area: col3;
+    padding: auto;
+}
+
+.col4 {
+    grid-area: col4;
+    padding: auto;
+}
+
+.col5 {
+    grid-area: col5;
+    padding: auto;
+}
+
+.col6 {
+    grid-area: col6;
+    padding: auto;
+}
+ 
 
 .facebook {
     grid-area: facebook;

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "cSpell.words": [
         "acceso",
         "además",
@@ -115,4 +116,7 @@
         "usar",
         "venta"
     ]
+=======
+    "liveServer.settings.port": 5503
+>>>>>>> b0ecddb33c31006de265432908fa8fbe21c07260
 }

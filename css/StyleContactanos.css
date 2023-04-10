@@ -13,40 +13,53 @@ html {
     font-family:Poppins;
 }
 
-
+a {
+    text-decoration: none;
+    color: white;
+}
 /* CSS NAVBAR */
-.logo {
-    width: 370px;
-    height: 172px;
-    position: absolute;
-    bottom: 125px;
+.img-container {
+    grid-area: img-container;
+    padding: 15px;
+}
+.enlaces-container {
+    grid-area: enlaces-container;
+
+}
+.login-container {
+    grid-area: login-container;
+}
+.lista{
+ list-style-type: none;
+ display: inline;
+ object-fit: contain;
 }
 
-.enlaces {
-    position: absolute;
-    top: 200px;
-    justify-content: center;
+#login{
+    width: 30px;
+    height: 50px;
+    padding-bottom: 15px;
+}
+#carrito{
+    width: 30px;
+    height: 40px;
 }
 
-#carrito {
-    padding: 10px;
-}
-
-#login {
-    padding: 10px;
-}
+/* CSS FOOTER */
 .bg-footer {
     background-color: #3D71BB;
 }
+
+/* CSS CONTENIDO */
 .navbar {
     grid-area: navbar;
     background-color: #3d71bb;
     height: 270px;
+    width: 100%;
 }
-
-/*CSS CONTENIDO*/
-
-
+.footer1 {
+    grid-area: footer1;
+}
 .formulario{
     grid-area: formulario;
 }
@@ -70,6 +83,24 @@ html {
         gap: 0px;
         height: 100%;
     }
+    /* footer */
+    .footer1 {
+        display: grid; 
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+         'col2 col1'
+         'col3 col5'
+         'col4 col6';
+        
+        gap: 0px;
+        height: 100%;
+    } /* Grid Footer */
+
+
+    .nav-item {
+        display: none;
+    }
 }
 
 /*Escritorio*/
@@ -86,43 +117,55 @@ html {
         gap: 0px;
         height: 100%;
     }
+    .footer1 {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            'col1 col2 col3 col4 col5 col6';
+
+        gap: 0px;
+        height: 100%;
+
+    }    /* Grid Footer */
 }
 
 
+.col1 {
+    grid-area: col1;
+    padding: auto;
+}
 
+.col2 {
+    grid-area: col2;
+    padding: auto;
+}
 
+.col3 {
+    grid-area: col3;
+    padding: auto;
+}
 
+.col4 {
+    grid-area: col4;
+    padding: auto;
+}
 
+.col5 {
+    grid-area: col5;
+    padding: auto;
+}
 
+.col6 {
+    grid-area: col6;
+    padding: auto;
+}
+ 
 
 
 
 
 /*css footer no tocar xd*/
-
-
-.footer1 {
-    grid-area: footer1;
-}
-  @media(max-width: 899px) {
-    .footer1 {
-        display: grid;
-
-        grid-template-rows: auto;
-        grid-template-columns: auto auto;
-
-        grid-template-areas:
-            'columnaF1 columnaF2';
-
-        gap: 0px;
-        height: 100%;        
-    }
-
-    .nav-item{
-        display: none;
-    }
-} 
-
  .facebook {
     grid-area: facebook;
     width: auto;
