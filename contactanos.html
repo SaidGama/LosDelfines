@@ -54,7 +54,27 @@
     </nav>
     <!-- CONTENIDO -->
     <div class="formulario">
-        <h1>el formulario aqui</h1>
+        <h1>Contáctanos</h1>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Nombre y Apellido:</label>
+                <input type="text" class="form-control" id="campNombre">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="campEmail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Teléfono:</label>
+                <input type="text" class="form-control" id="campTelefono">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="campMensaje" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
+        </form>
     </div>
     <div class="informacion">
         <h1>la informacion de la derecha va aqui</h1>
@@ -89,8 +109,8 @@
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contacto</a></li>
                 </ul>
             </div>
-       </div> 
-         <div class="columnaF2"> 
+        </div>
+        <div class="columnaF2">
             <div class="col mb-3">
                 <h5>Redes Sociales</h5>
                 <img src="./img/Facebook.png" alt="Icono" width="50px" height="50px" id="facebook" class="facebook">
@@ -99,7 +119,7 @@
             </div>
             <div class="col mb-3">
             </div>
-        </div> 
+        </div>
     </footer>
 
     <script src="js/contactanos.js"></script>
