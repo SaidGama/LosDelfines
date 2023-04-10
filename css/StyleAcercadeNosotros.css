@@ -11,6 +11,7 @@ body {
 
 html {
     height: 100%;
+    font-family:Poppins;
 }
 
 /* CSS NAVBAR */
@@ -43,7 +44,7 @@ html {
 /* CSS CONTENIDO */
 
 
-@keyframes animate {
+@keyframes animate{
     0% {
         background-position: left 0px top 80px;
     }
@@ -75,12 +76,11 @@ html {
 }
 
 .articulo1 {
+
     grid-area: articulo1;
-<<<<<<< HEAD
-   
-=======
     padding: 30px;
->>>>>>> 4b389635de63bf1e3d51c40d1d4371fcd6395eb6
+    font-family:Poppins ;
+    
 }
 
 .articulo2 {
@@ -105,19 +105,21 @@ html {
 .columna2 {
     grid-area: columna2;
     padding: 18px;
+    
 }
 
 .footer1 {
     grid-area: footer1;
+    
 }
 
 /*VistaCelular*/
-<<<<<<< HEAD
 
 .grid-container {
     grid-template-columns: auto;
     grid-template-rows: 20% auto auto auto auto auto auto auto;
     grid-template-areas: "navbar" "imagenportada" "articulo1" "articulo2" "tituloEquipo" "columna1" "columna2" "footer1";
+  
 }
 
 .facebook{
@@ -135,10 +137,9 @@ html {
     width: auto;
     height:auto;
 }
-@media(max-width: 899px){
-=======
+
 @media(max-width: 899px) {
->>>>>>> 4b389635de63bf1e3d51c40d1d4371fcd6395eb6
+
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto auto auto auto auto;
@@ -172,22 +173,20 @@ html {
             'columna1 columna2'
             'footer1 footer1';
     }
-<<<<<<< HEAD
-};
-=======
+
 }
 
-  @media(max-width: 899px) {
+ @media(max-width: 899px) {
     .footer1 {
-        display: grid;
-
+        vertical-align: middle;
+        
+        
         grid-template-rows: auto;
         grid-template-columns: auto auto;
 
         grid-template-areas:
             'columnaF1 columnaF2';
-
-        gap: 0px;
+            gap: 0px;
         height: 100%;        
     }
 
@@ -196,7 +195,7 @@ html {
     }
 } 
 
- .facebook {
+.facebook {
     grid-area: facebook;
     width: auto;
     height: auto;
@@ -211,4 +210,3 @@ html {
     width: auto;
     height: auto;
 }
->>>>>>> 4b389635de63bf1e3d51c40d1d4371fcd6395eb6
