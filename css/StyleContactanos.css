@@ -10,6 +10,7 @@ body {
 
 html {
     height: 100%;
+    font-family:Poppins;
 }
 
 
@@ -51,6 +52,7 @@ html {
 }
 .informacion{
     grid-area: informacion;
+    font-family: Poppins;
 }
 
 /*VistaCelular*/
@@ -85,13 +87,6 @@ html {
         height: 100%;
     }
 }
-
-
-
-
-
-
-
 
 
 
