@@ -44,7 +44,6 @@ a {
     width: 30px;
     height: 40px;
 }
-
 /* CSS FOOTER */
 .bg-footer {
     background-color: #3D71BB;
@@ -182,6 +181,15 @@ a {
 
 /*Escritorio*/
 @media(min-width:900px) {
+    .navbar{
+        display: grid;
+        grid-template-rows:60% 40%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+        grid-template-areas: 
+        '. img-container img-container img-container login-container'
+        '. enlaces-container enlaces-container enlaces-container login-container';
+    }
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto auto auto auto;
