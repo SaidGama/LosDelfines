@@ -69,6 +69,15 @@ a {
 
 /*VistaCelular*/
 @media(max-width: 899px) {
+    .navbar{
+        display: grid;
+        grid-template-rows:60% 40%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+        grid-template-areas: 
+        '. img-container img-container img-container login-container'
+        '. enlaces-container enlaces-container enlaces-container login-container';
+    }
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto auto;
@@ -100,6 +109,10 @@ a {
     .nav-item {
         display: none;
     }
+    .enlaces-container {
+        display: none;
+    }
+      
 }
 
 /*Escritorio*/
