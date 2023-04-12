@@ -53,18 +53,18 @@ function mostrarValidacion(){
     validacionTexto.insertAdjacentHTML("afterend", html);
 }
 
-function validarCorreo(){
-   // const emailvalido = regex.test (campEmail.value);
-     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(campEmail.value)==false || esvalidoCorreo==false){
-        campEmail.style.border="solid thin red";
-        campEmail.style.display="block";
+function validarCorreo() {
+    esvalidoCorreo = true; // Establecer como verdadero al inicio de la validación
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(campEmail.value) == false) {
+        campEmail.style.border = "solid thin red";
+        campEmail.style.display = "block";
         esvalidoCorreo = false;
-     } else {
-        campEmail.style.border=" solid thin green";
-        esvalidoCorreo = true;
-        return true;
-     }
-};
+    } else {
+        campEmail.style.border = "solid thin green";
+    }
+    return esvalidoCorreo; // Retornar el valor de esvalidoCorreo
+}
+
 //if campo telefono //parsein de 10 numeros
 function validarNum (){
     if (campTelefono.value.length<10 || campTelefono.value.length>10){
@@ -73,7 +73,7 @@ function validarNum (){
         campTelefono.style.border="solid thin green"; 
         return true;
     }
-};//validar telefono
+}//validar telefono
 
 function validarCampo (){
     if (campMensaje.value.length<1 || campMensaje.value.length>300){
@@ -82,4 +82,4 @@ function validarCampo (){
         campMensaje.style.border="solid thin green"; 
         return true;
     }
-};
+}
