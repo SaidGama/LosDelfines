@@ -36,29 +36,47 @@
         </div>
     </nav>
     <!-- CONTENIDO -->
-    <div class="formulario">
+    
+   <div class="formulario">
         <h1>Contáctanos</h1>
+        <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertError">
+            <p id="alertErrorTexto"> </p>
+          </div>
         <form>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Nombre y Apellido:</label>
                 <input type="text" class="form-control" id="campNombre">
+                <div class="invalid-feedback">Nombre inválido.</div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="campEmail" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+                <div class="invalid-feedback">
+                    correo inválido.
+                </div>
             </div>
-            <div class="mb-3">
+             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Teléfono:</label>
                 <input type="text" class="form-control" id="campTelefono">
+                <div class="invalid-feedback">
+                    Teléfono inválido.
+                </div>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
                 <textarea class="form-control" id="campMensaje" rows="3"></textarea>
+                <div class="invalid-feedback">
+                    Favor de escribir un mensaje.
+                </div>
             </div>
             <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
         </form>
+         <div class="alert alert-success fade show" style="display:none; width: fit-content; height:fit-content;" role="alert" id="ValidaBoton">
+            <p id="validacionTexto" style="text-align: center;">¡Se envió con éxito el correo!</p>
+          </div>
     </div>
+
     <div class="informacion" font-family="Poppins">
         <div class="shadow p-3 mb-5 bg-white rounded">
             <p><img src="img/icons-phone.png" alt="correo"> Llámanos</p>
@@ -116,6 +134,7 @@
     </footer>
 
     <script src="js/contactanos.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!--Scripts de Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
