@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 let campTelefono = document.getElementById("campTelefono");
 let campMensaje = document.getElementById("campMensaje");
 let campEmail = document.getElementById("campEmail");
@@ -129,4 +127,4 @@ campMensaje.addEventListener("blur", function(event){
     event.preventDefault();
     campMensaje.value = campMensaje.value.trim();
 }); //blur
->>>>>>> 3b48c8133f02fc2c23cf2c0a6fadd3dcf41b2ff3
+
