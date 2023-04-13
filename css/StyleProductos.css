@@ -60,13 +60,7 @@ a {
 .footer1 {
     grid-area: footer1;
 }
-.formulario{
-    grid-area: formulario;
-}
-.informacion{
-    grid-area: informacion;
-    padding: 50px;
-}
+
 
 /*VistaCelular*/
 @media(max-width: 899px) {
