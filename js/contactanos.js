@@ -1,5 +1,7 @@
 let campTelefono = document.getElementById("campTelefono");
 let campMensaje = document.getElementById("campMensaje");
+let campEmail = document.getElementById("campEmail");
+let campNombre = document.getElementById("campNombre");
 let btnEnviar = document.getElementById("btnEnviar");
 let ValidaBoton = document.getElementById("ValidaBoton");
 let validacionTexto = document.getElementById("validacionTexto");
@@ -8,11 +10,12 @@ let esvalido = true;
 let esvalidoCorreo = true;
 let esvalidoNombre = true;
 let alerta = "";
-let html = `<div class="alert alert-danger fade show" style="display:block;" role="alert" id="validaBoton">
-<p id="validacionTexto">Se envio con éxito el correo </p>
-</div>`;
-
+let alertError = document.getElementById("alertError");
+let alertErrorTexto = document.getElementById("alertErrorTexto");
+let idTimeout;
+let html = ""
 //Implementa una función de JavaScript que valide los tipos de entrada y la corrección cuando se presiona el botón Enviar
+
 
 btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
