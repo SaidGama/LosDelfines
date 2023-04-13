@@ -97,8 +97,6 @@ function mostrarValidacion(){
 function validarCorreo() {
     esvalidoCorreo = true; // Establecer como verdadero al inicio de la validación
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(campEmail.value) == false) {
-        campEmail.style.border = "solid thin red";
-        campEmail.style.display = "block";
         esvalidoCorreo = false;
     } else {
         campEmail.style.border = "solid thin green";
@@ -124,3 +122,7 @@ function validarCampo (){
         return true;
     }
 }
+campMensaje.addEventListener("blur", function(event){
+    event.preventDefault();
+    campMensaje.value = campMensaje.value.trim();
+}); //blur
