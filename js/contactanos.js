@@ -19,20 +19,57 @@ let html = ""
 
 btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
-    campNombre.innerHTML=""; //limpiar
-    let Nombre="Los siguientes campos deben ser llenados correctamente:<ul>";
+    // esvalidoNombre = true;
+    // esvalidoCorreo = true;
+    clearTimeout(idTimeout);
+    alertErrorTexto.innerHTML="";
+    alertError.style.display="none";
+    let Nombre= "Los siguientes campos deben ser llenados correctamente:<ul>";
+    
     if (campNombre.value.length<2){
         campNombre.style.border="solid thin red"; 
-        Nombre +="<li>Se debe escribir un nombre válido</li>";
+        Nombre += "<li>Escribe un nombre válido.</li>";
         campNombre.style.display="block";
-        esvalidoNombre = false;
+        // esvalidoNombre = false;
     } else{
-          campNombre.style.border="";
-          esvalidoNombre = true;
+          campNombre.style.border="solid thin green";
+          
     }//if campNombre    
-   validarCorreo();
-   validarNum();
-   validarCampo();
+//    validarCorreo();
+//    validarNum();
+//    validarCampo();
+    if(!validarCorreo()){
+        campEmail.style.border="solid thin red";
+        Nombre += "<li>Escribe un email válido.</li>";
+        alertError.style.display="block";
+        // alertErrorTexto.innerHTML="Escribe un nombre válido"
+    }else{
+        campEmail.style.border="solid thin green";
+    }//if correo
+
+    if (!validarNum()){
+        campTelefono.style.border="solid thin red";
+        Nombre += "<li>Escribe un número de teléfono válido.</li>";
+        alertError.style.display="block";
+        // alertErrorTexto.innerHTML="Escribe un número de teléfono válido"
+    }else{
+        campTelefono.style.border="solid thin green";
+    }//if teléfono
+
+    if (!validarCampo()){
+        campMensaje.style.border="solid thin red";
+        Nombre += "<li>Escribe un mensaje.</li>"
+        alertError.style.display="block";
+        // alertErrorTexto.innerHTML="Escribe un mensa válido"
+    }else{
+        campTelefono.style.border="solid thin green";
+    }
+    Nombre += "</ul>";
+    alertErrorTexto.insertAdjacentHTML("beforeend", Nombre);
+    idTimeout=setTimeout (function(){
+        alertError.style.display="none";
+    }, 5000);
+
    if (validarCorreo()==true && validarNum()== true && validarCampo()==true && esvalidoNombre == true){
     console.log("ok! lo logramos")
 
@@ -49,6 +86,7 @@ btnEnviar.addEventListener("click", function(event){
       message => mostrarValidacion()
     );
    }
+    
 
 });// btnEnviar click
 function mostrarValidacion(){
