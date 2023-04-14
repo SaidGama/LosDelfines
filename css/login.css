@@ -10,6 +10,7 @@ body {
 
 html {
     height: 100%;
+    font-family:'Poppins';
 }
 
 a {
@@ -56,48 +57,46 @@ a {
     height: 270px;
     width: 100%;
 }
-
 .footer1 {
     grid-area: footer1;
+}
+.formulario{
+    grid-area: formulario;
+}
+.informacion{
+    grid-area: informacion;
+    padding: 50px;
 }
 
 /*VistaCelular*/
 @media(max-width: 899px) {
+    .navbar{
+        display: grid;
+        grid-template-rows:60% 40%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+        grid-template-areas: 
+        '. img-container img-container img-container login-container'
+        '. enlaces-container enlaces-container enlaces-container login-container';
+    }
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
-            '.'
-            '.'
-            '.'
-            '.'
-            '.'
-            '.'
+            'imagenportada'
+            'formulario'
+            'informacion'
             'footer1';
         gap: 0px;
         height: 100%;
     }
-
-    .columna1 {
-        grid-area: columna1;
-
-
-    }
-
-    .columna2 {
-        grid-area: columna2;
-
-    }
-
     /* footer */
     .footer1 {
         display: grid; 
-
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        
         grid-template-areas: 
          'col2 col1'
          'col3 col5'
@@ -105,19 +104,17 @@ a {
         
         gap: 0px;
         height: 100%;
-
-
     } /* Grid Footer */
 
 
     .nav-item {
         display: none;
     }
-
-    /* footer */
+    .enlaces-container {
+        display: none;
+    }
+      
 }
-
-
 
 /*Escritorio*/
 @media(min-width:900px) {
@@ -132,24 +129,20 @@ a {
     }
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
             'imagenportada imagenportada'
-            'articulo1 articulo2'
-            'tituloEquipo tituloEquipo'
-            'columna1 columna2'
-            'columna1 columna2'
+            'formulario  informacion'
             'footer1 footer1';
+        gap: 0px;
+        height: 100%;
     }
-
     .footer1 {
         display: grid;
-
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-
         grid-template-areas:
             'col1 col2 col3 col4 col5 col6';
 
@@ -157,7 +150,6 @@ a {
         height: 100%;
 
     }    /* Grid Footer */
-
 }
 
 
@@ -192,6 +184,12 @@ a {
 }
  
 
+.formulario {
+    padding: 50px;
+}
+
+
+/*css footer no tocar xd*/
  .facebook {
     grid-area: facebook;
     width: auto;
@@ -207,16 +205,3 @@ a {
     width: auto;
     height: auto;
 }
-
-@media(min-width:900px) {
-    .navbar{
-        display: grid;
-        grid-template-rows:60% 40%;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
-        grid-template-areas: 
-        '. img-container img-container img-container login-container'
-        '. enlaces-container enlaces-container enlaces-container login-container';
-    }
-}
-
