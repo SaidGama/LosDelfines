@@ -24,11 +24,18 @@ a {
 
 }
 
-.informacion {
-    grid-area: informacion;
-    padding: 50px;
+.imagenPortada{
+    grid-area: imagenPortada;
+    background-color: red;
 }
-
+.botonOrdenadar{
+    grid-area: botonOrdenar;
+    background-color: #3D71BB;
+}
+.productos{
+    grid-area: productos;
+    background-color: greenyellow;
+}
 /*VistaCelular*/
 @media(max-width: 899px) {
     .navbar {
@@ -128,7 +135,7 @@ a {
         grid-template-areas:
             '. img-container img-container img-container login-container'
             '. enlaces-container enlaces-container enlaces-container login-container';
-        height: 270px;
+        height: auto;
         width: 100%;
     }
 
@@ -172,12 +179,13 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
-            'imagenportada imagenportada'
-            'formulario  informacion'
+            'imagenPortada imagenPortada'
+            'botonOrdenar  botonOrdenar'
+            'productos     productos'
             'footer1 footer1';
         gap: 0px;
         height: 100%;
