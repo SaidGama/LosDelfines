@@ -17,6 +17,15 @@ a {
     color: white;
 }
 
+.loader {
+    text-decoration: uppercase;
+    font-size: 8em;
+    color: rgba(0, 0, 0, .1);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhT9AXpUqUyMjILJ9qn9PDvXpdXE-iqbc-HMXHfU04s6rJ0fbT);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: animate 60s linear infinite;
+}
 
 @keyframes animate {
     0% {
@@ -33,41 +42,50 @@ a {
 
 }
 
-
 .navbar {
     grid-area: navbar;
     background-color: #3d71bb;
 }
+
 .imagenportada {
     grid-area: imagenportada;
 }
+
 .fotoportada {
     width: 100%;
 }
+
 .articulo1 {
     grid-area: articulo1;
     padding-left: 10%;
     padding-right: 10%;
 }
+
 .articulo2 {
     grid-area: articulo2;
     padding-left: 10%;
     padding-right: 10%;
 }
-.Fotoizquierda{
-    height: 100%; width: 100%; object-fit: contain;
+
+.Fotoizquierda {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
+
 .tituloEquipo {
     grid-area: tituloEquipo;
     padding-left: 5%;
     padding-bottom: 2%;
     padding-top: 2%;
 }
+
 .columna1 {
     grid-area: columna1;
     padding-left: 10%;
     padding-right: 10%;
 }
+
 .columna2 {
     grid-area: columna2;
     padding-left: 10%;
@@ -86,6 +104,7 @@ a {
         height: auto;
         padding: 0;
     }
+
     .logoDelfin {
         width: 100%;
         height: 100%;
@@ -127,6 +146,7 @@ a {
     .enlaces-container {
         display: none;
     }
+
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto auto auto auto auto;
@@ -157,41 +177,43 @@ a {
 
     /* footer */
     .footer1 {
-        display: grid; 
+        display: grid;
 
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        
-        grid-template-areas: 
-         'col2 col1'
-         'col3 col5'
-         'col4 col6';
-        
+
+        grid-template-areas:
+            'col2 col1'
+            'col3 col5'
+            'col4 col6';
+
         gap: 0px;
         height: 100%;
 
 
-    }   
+    }
 }
 
 
 
 /*Escritorio*/
 @media(min-width:900px) {
-    .navbar-toggler{
+    .navbar-toggler {
         display: none;
     }
-    .navbar{
+
+    .navbar {
         display: grid;
-        grid-template-rows:60% 40%;
+        grid-template-rows: 60% 40%;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
-        grid-template-areas: 
-        '. img-container img-container img-container login-container'
-        '. enlaces-container enlaces-container enlaces-container login-container';
+
+        grid-template-areas:
+            '. img-container img-container img-container login-container'
+            '. enlaces-container enlaces-container enlaces-container login-container';
     }
-     /* CSS NAVBAR */
-     .img-container {
+
+    /* CSS NAVBAR */
+    .img-container {
         grid-area: img-container;
         padding: 15px;
     }
@@ -227,6 +249,7 @@ a {
         width: 30px;
         height: 40px;
     }
+
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto auto auto auto;
@@ -253,7 +276,9 @@ a {
         gap: 0px;
         height: 100%;
 
-    }    /* Grid Footer */
+    }
+
+    /* Grid Footer */
 
 }
 
