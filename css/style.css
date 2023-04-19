@@ -141,7 +141,7 @@ a {
     .footer1 {
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto auto auto auto;
         grid-template-areas:
             'col1 col2 col3 col4 col5 col6';
 
@@ -155,31 +155,38 @@ a {
 .col1 {
     grid-area: col1;
     padding: auto;
+    text-align: center;
 }
 
 .col2 {
     grid-area: col2;
     padding: auto;
+     text-align: center;
+     
 }
 
 .col3 {
     grid-area: col3;
     padding: auto;
+    text-align: center;
 }
 
 .col4 {
     grid-area: col4;
     padding: auto;
+    text-align: center;
 }
 
 .col5 {
     grid-area: col5;
     padding: auto;
+    text-align: center;
 }
 
 .col6 {
     grid-area: col6;
     padding: auto;
+    text-align: center;
 }
  
 
