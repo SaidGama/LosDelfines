@@ -10,7 +10,7 @@ body {
 
 html {
     height: 100%;
-    font-family:'Poppins';
+    font-family: 'Poppins';
 }
 
 a {
@@ -18,61 +18,71 @@ a {
     color: white;
 }
 
-/* CSS NAVBAR */
-.img-container {
-    grid-area: img-container;
-    padding: 15px;
-}
-.enlaces-container {
-    grid-area: enlaces-container;
-
-}
-.login-container {
-    grid-area: login-container;
-}
-.lista{
- list-style-type: none;
- display: inline;
- object-fit: contain;
-}
-
-#login{
-    width: 30px;
-    height: 50px;
-    padding-bottom: 15px;
-}
-#carrito{
-    width: 30px;
-    height: 40px;
-}
-/* CSS FOOTER */
-.bg-footer {
-    background-color: #3D71BB;
-}
-
-/* CSS CONTENIDO */
 .navbar {
     grid-area: navbar;
     background-color: #3d71bb;
-    height: 270px;
-    width: 100%;
-}
-.footer1 {
-    grid-area: footer1;
+
 }
 
+.informacion {
+    grid-area: informacion;
+    padding: 50px;
+}
 
 /*VistaCelular*/
 @media(max-width: 899px) {
-    .navbar{
+    .navbar {
         display: grid;
-        grid-template-rows:60% 40%;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
-        grid-template-areas: 
-        '. img-container img-container img-container login-container'
-        '. enlaces-container enlaces-container enlaces-container login-container';
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 50% 25%;
+        grid-template-areas:
+            'menuBoton img-container login-container';
+        height: auto;
+        padding: 0;
     }
+
+    .logoDelfin {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #login {
+        width: 25px;
+        height: 25px;
+        margin: 15%;
+    }
+
+    #carrito {
+        width: 25px;
+        height: 30px;
+    }
+
+    .menuBoton {
+        grid-area: menuBoton;
+    }
+
+    .img-container {
+        grid-area: img-container;
+    }
+
+    .login-container {
+        grid-area: login-container;
+        padding-right: 5%;
+    }
+
+    .lista {
+        list-style-type: none;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .enlaces-container {
+        display: none;
+    }
+
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto auto;
@@ -86,41 +96,80 @@ a {
         gap: 0px;
         height: 100%;
     }
+
     /* footer */
     .footer1 {
-        display: grid; 
+        display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-         'col2 col1'
-         'col3 col5'
-         'col4 col6';
-        
+        grid-template-areas:
+            'col2 col1'
+            'col3 col5'
+            'col4 col6';
+
         gap: 0px;
         height: 100%;
-    } /* Grid Footer */
-
-
-    .nav-item {
-        display: none;
     }
-    .enlaces-container {
-        display: none;
-    }
-      
+
 }
 
 /*Escritorio*/
 @media(min-width:900px) {
-    .navbar{
-        display: grid;
-        grid-template-rows:60% 40%;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
-        grid-template-areas: 
-        '. img-container img-container img-container login-container'
-        '. enlaces-container enlaces-container enlaces-container login-container';
+
+    .navbar-toggler {
+        display: none;
     }
+
+    .navbar {
+        display: grid;
+        grid-template-rows: 60% 40%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+        grid-template-areas:
+            '. img-container img-container img-container login-container'
+            '. enlaces-container enlaces-container enlaces-container login-container';
+        height: 270px;
+        width: 100%;
+    }
+
+    /* CSS NAVBAR */
+    .img-container {
+        grid-area: img-container;
+        padding: 15px;
+    }
+
+    .logoDelfin {
+        width: 100%;
+        height: 170px;
+        object-fit: contain;
+    }
+
+    .enlaces-container {
+        grid-area: enlaces-container;
+
+    }
+
+    .login-container {
+        grid-area: login-container;
+    }
+
+    .lista {
+        list-style-type: none;
+        display: inline;
+        object-fit: contain;
+    }
+
+    #login {
+        width: 30px;
+        height: 50px;
+        padding-bottom: 15px;
+    }
+
+    #carrito {
+        width: 30px;
+        height: 40px;
+    }
+
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto;
@@ -133,69 +182,90 @@ a {
         gap: 0px;
         height: 100%;
     }
+
     .footer1 {
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto auto auto auto;
         grid-template-areas:
             'col1 col2 col3 col4 col5 col6';
 
         gap: 0px;
         height: 100%;
 
-    }    /* Grid Footer */
+    }
+
+    /* Grid Footer */
 }
 
 
-.col1 {
-    grid-area: col1;
-    padding: auto;
+
+
+
+
+
+/*==================CSS FOOTER========================*/
+.bg-footer {
+    background-color: #3D71BB;
 }
 
-.col2 {
-    grid-area: col2;
-    padding: auto;
+.footer1 {
+    grid-area: footer1;
 }
 
-.col3 {
-    grid-area: col3;
-    padding: auto;
-}
-
-.col4 {
-    grid-area: col4;
-    padding: auto;
-}
-
-.col5 {
-    grid-area: col5;
-    padding: auto;
-}
-
-.col6 {
-    grid-area: col6;
-    padding: auto;
-}
- 
-
-.formulario {
-    padding: 50px;
-}
-
-
-/*css footer no tocar xd*/
- .facebook {
+.facebook {
     grid-area: facebook;
     width: auto;
     height: auto;
 }
+
 .instagram {
     grid-area: instagram;
     width: auto;
     height: auto;
 }
+
 .whatsapp {
     grid-area: whatsapp;
     width: auto;
     height: auto;
 }
+
+.col1 {
+    grid-area: col1;
+    padding: auto;
+    text-align: center;
+}
+
+.col2 {
+    grid-area: col2;
+    padding: auto;
+    text-align: center;
+
+}
+
+.col3 {
+    grid-area: col3;
+    padding: auto;
+    text-align: center;
+}
+
+.col4 {
+    grid-area: col4;
+    padding: auto;
+    text-align: center;
+}
+
+.col5 {
+    grid-area: col5;
+    padding: auto;
+    text-align: center;
+}
+
+.col6 {
+    grid-area: col6;
+    padding: auto;
+    text-align: center;
+}
+
+/*==================================*/

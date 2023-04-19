@@ -35,41 +35,50 @@ a {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 50% 25%;
-        grid-template-areas: 
-	    'menuBoton img-container login-container';
+        grid-template-areas:
+            'menuBoton img-container login-container';
         height: auto;
         padding: 0;
     }
-    .logoDelfin{
-        width: 100%; 
+
+    .logoDelfin {
+        width: 100%;
         height: 100%;
-        object-fit: contain;   
+        object-fit: contain;
     }
+
     #login {
-        width: 25px; 
+        width: 25px;
         height: 25px;
         margin: 15%;
     }
+
     #carrito {
-        width: 25px; 
-        height: 30px;        
+        width: 25px;
+        height: 30px;
     }
-    .menuBoton{
+
+    .menuBoton {
         grid-area: menuBoton;
     }
+
     .img-container {
         grid-area: img-container;
     }
+
     .login-container {
         grid-area: login-container;
         padding-right: 5%;
     }
+
     .lista {
         list-style-type: none;
     }
+
     .nav-item {
         display: none;
     }
+
     .enlaces-container {
         display: none;
     }
@@ -107,9 +116,10 @@ a {
 /*Escritorio*/
 @media(min-width:900px) {
 
-    .navbar-toggler{
+    .navbar-toggler {
         display: none;
     }
+
     .navbar {
         display: grid;
         grid-template-rows: 60% 40%;
@@ -127,13 +137,18 @@ a {
         grid-area: img-container;
         padding: 15px;
     }
-    .logoDelfin{
-        width: 100%; height: 170px; object-fit: contain;
+
+    .logoDelfin {
+        width: 100%;
+        height: 170px;
+        object-fit: contain;
     }
+
     .enlaces-container {
         grid-area: enlaces-container;
 
     }
+
     .login-container {
         grid-area: login-container;
     }
@@ -193,9 +208,11 @@ a {
 .bg-footer {
     background-color: #3D71BB;
 }
+
 .footer1 {
     grid-area: footer1;
 }
+
 .facebook {
     grid-area: facebook;
     width: auto;
@@ -223,8 +240,8 @@ a {
 .col2 {
     grid-area: col2;
     padding: auto;
-     text-align: center;
-     
+    text-align: center;
+
 }
 
 .col3 {
@@ -250,5 +267,5 @@ a {
     padding: auto;
     text-align: center;
 }
-/*==================================*/
 
+/*==================================*/
