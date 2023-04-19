@@ -32,10 +32,7 @@ a {
     grid-area: botonOrdenar;
     background-color: #3D71BB;
 }
-.productos{
-    grid-area: productos;
-    background-color: greenyellow;
-}
+
 /*VistaCelular*/
 @media(max-width: 899px) {
     .navbar {
@@ -122,6 +119,16 @@ a {
 
 /*Escritorio*/
 @media(min-width:900px) {
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+    .cajitas{
+        padding: 30px;
+    }
 
     .navbar-toggler {
         display: none;
