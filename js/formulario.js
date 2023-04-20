@@ -1,6 +1,6 @@
 
 function validacionCampoID(params) {
-    
+
 }
 function validacionCampoNombre(params) {
     

@@ -137,3 +137,7 @@ campMensaje.addEventListener("blur", function(event){
     campMensaje.value = campMensaje.value.trim();
 }); //blur
 
+campNombre.addEventListener("blur", function(event){
+    event.preventDefault();
+    campNombre.value = campNombre.value.trim();
+}); //blur
