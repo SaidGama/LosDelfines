@@ -24,13 +24,22 @@ a {
 
 }
 
-.imagenPortada{
+.imagenPortada {
     grid-area: imagenPortada;
-    background-color: red;
+    background-image: url(/img/imagenPortadaProductos.png);
+    backdrop-filter: blur(49px);
+    height: 350px;
+    background-size: cover;
+    background-position: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;        
+    font-family: 'Poppins', sans-serif;
 }
-.botonOrdenadar{
+.botonOrdenadar {
     grid-area: botonOrdenar;
-    background-color: #3D71BB;
+    padding: 20px;
 }
 
 
