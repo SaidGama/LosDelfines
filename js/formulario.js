@@ -1,6 +1,31 @@
 let campDescripcion = document.getElementById("campDescrip");
 let campNombre = document.getElementById("campNombre");
 
+let btnCrear = document.getElementById("botonCrear");
+let arrayProductos = [];
+
+
+
+btnCrear.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    if (validacionCampoNombre() == true && validacionPrecio() == true && validacionDescripcion() == true
+        && validacionDetallestecnicos() == true && validacionStock()) {
+        let producto = `{
+             "id": ${}, 
+             "nombre": "${}", 
+             "precio": ${}, 
+             "descripcion": 
+             {"descripcion1": "${}", 
+             "detallesTec": " "}, 
+             "imagen": 
+             {"img1": "./productos_ima/garrafones cuadrados 20 litros.jpeg", 
+             "img2": "#", 
+             "img3": "#" , 
+             "img4": "#"}, 
+             "stock": 1}`
+    }
+})
 
 function validacionCampoID(params) {
 
@@ -13,8 +38,10 @@ function validacionCampoNombre(params) {
         return true;
     }//if
 }//validar Nombre
+
+}
 function validacionPrecio(params) {
-    
+
 }
 let Id = document.getElementById("campoId");
 let Precio = document.getElementById("CampoPrecios");
@@ -40,6 +67,8 @@ function validacionCampoID(campoId) {
 
 function validacionCampoNombre(params) {
     
+function validacionDescripcion(params) {
+
 }
 function validacionPrecio(CampoPrecios) { 
     if(CampoPrecios <1){
@@ -62,7 +91,7 @@ function validacionDescripcion(params) {
 }//validacionDescripción 
 
 function validacionDetallestecnicos(params) {
-    
+
 }
 function validacionStock(params) {
     
@@ -103,3 +132,6 @@ function validacionStock(valiStock) {
 
   
   
+
+}
+
