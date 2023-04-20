@@ -33,6 +33,7 @@ a {
     background-color: #3D71BB;
 }
 
+
 /*VistaCelular*/
 @media(max-width: 899px) {
     .navbar {
@@ -116,18 +117,23 @@ a {
     }
 
 }
+.productos{
+    grid-area: productos;
+    
+}
 
 /*Escritorio*/
 @media(min-width:900px) {
     .productos{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        padding-left: 20px;
-        padding-right: 20px;
+        grid-template-columns:auto auto auto ;
+        
+        /* padding-left: 100px;
+        padding-right: 100px; */
         width: 100%;
     }
     .cajitas{
-        padding: 30px;
+        padding: 40px;
     }
 
     .navbar-toggler {

@@ -71,6 +71,15 @@ btnEnviar.addEventListener("click", function(event){
         alertError.style.display="none";
     }, 5000);
 
+ //btnlimpiar click
+btnClear.addEventListener("click",function(event){
+    event.preventDefault();
+    campNombre.value="";
+    campEmail.value="";
+    campTelefono.value="";
+    campMensaje.value="";
+});//btn limpiar
+
    if (validarCorreo()==true && validarNum()== true && validarCampo()==true && esvalidoNombre == true){
     console.log("ok! lo logramos")
 
