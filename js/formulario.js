@@ -1,8 +1,10 @@
+
+let campDescripcion = document.getElementById("campDescrip");
 let campNombre = document.getElementById("campNombre");
 
 
 function validacionCampoID(params) {
-    
+
 }
 function validacionCampoNombre(params) {
     if (campNombre.ariaValueMax.length <4 || campNombre.ariaValueMax.length>50){
@@ -16,8 +18,14 @@ function validacionPrecio(params) {
     
 }
 function validacionDescripcion(params) {
-    
-}
+    if (campDescripcion.value.length<1 || campDescripcion.value.length>50){
+        campDescripcion.style.border="solid thin red";
+    }else {
+        campDescripcion.style.border="solid thin green";
+        return true;
+    }//validar la descripción breve con uno y menos de 50 caracteres
+}//validacionDescripción 
+
 function validacionDetallestecnicos(params) {
     
 }
