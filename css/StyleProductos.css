@@ -32,6 +32,9 @@ a {
     grid-area: botonOrdenar;
     background-color: #3D71BB;
 }
+.productos{
+    grid-area: productos;
+}
 
 
 /*VistaCelular*/
@@ -117,29 +120,28 @@ a {
     }
 
 }
-.productos{
-    grid-area: productos;
-    
-}
 
 /*Escritorio*/
 @media(min-width:900px) {
     .productos{
         display: grid;
-        grid-template-columns:auto auto auto ;
-        
-        /* padding-left: 100px;
-        padding-right: 100px; */
-        width: 100%;
+        grid-template-columns: auto auto auto;
+        padding: 100px;
     }
     .cajitas{
-        padding: 40px;
+        padding: 35px;
     }
-
+    .card-img-top{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    #botonAgregarCarrito{
+        width: 65%;
+    }
     .navbar-toggler {
         display: none;
     }
-
     .navbar {
         display: grid;
         grid-template-rows: 60% 40%;

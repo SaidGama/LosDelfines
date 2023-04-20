@@ -13,15 +13,15 @@ let produc11 = { "id": 11, "nombre": "Botellón pet plástico 20lts", "precio": 
 function addItem(item) {
     const itemHTML = `
     <div class = "cajitas container">
-    <div class="card h-100" style="width: 18rem;">
+    <div class="card h-100">
         <img src="${item.imagen['img1']}" class="card-img-top" alt="imagen">
         <div class="card-body">
             <h5 class="card-title">${item.nombre}</h5>
-            <p class="card-text">${item.descripcion['descripcion1']}</p>
-            <div style= "display: flex;">
-            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-            <h5 class="card-title" style = "padding-left: 15px; padding-top: 8px;">$${item.precio}</h5>
-            </div>
+                <p class="card-text text-justify">${item.descripcion['descripcion1']}</p>
+                <div style="display: flex; align-items: center; justify-content: space-around;">
+                <a href="#" class="btn btn-primary" id="botonAgregarCarrito">Agregar<br> al carrito</a>
+                <h5 class="card-title" style = "padding-left: 15px; padding-top: 8px;">$${item.precio}</h5>
+                </div>
         </div>
     </div>
     </div>`;
