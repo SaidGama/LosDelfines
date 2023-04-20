@@ -198,6 +198,24 @@ a {
 
 /*Escritorio*/
 @media(min-width:900px) {
+    .custom-shape-divider-top-1681942707 {
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: 2;
+    }
+    
+    .custom-shape-divider-top-1681942707 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 59px;
+    }
+    .custom-shape-divider-top-1681942707 .shape-fill {
+        fill: #3D71BB;
+    }
     .navbar-toggler {
         display: none;
     }
@@ -216,6 +234,7 @@ a {
     .img-container {
         grid-area: img-container;
         padding: 15px;
+        z-index: 2;
     }
 
     .logoDelfin {
