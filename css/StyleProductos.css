@@ -24,23 +24,7 @@ a {
 
 }
 
-.imagenPortada {
-    grid-area: imagenPortada;
-    background-image: url(/img/imagenPortadaProductos.png);
-    backdrop-filter: blur(49px);
-    height: 350px;
-    background-size: cover;
-    background-position: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;        
-    font-family: 'Poppins', sans-serif;
-}
-.botonOrdenadar {
-    grid-area: botonOrdenar;
-    padding: 20px;
-}
+
 .productos{
     grid-area: productos;
 }
@@ -48,6 +32,42 @@ a {
 
 /*VistaCelular*/
 @media(max-width: 899px) {
+    .imagenPortada {
+        grid-area: imagenPortada;
+        background-image: url(/img/imagenPortadaProductos.png);
+        backdrop-filter: blur(49px);
+        height: 350px;
+        background-size: cover;
+        background-position: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;        
+        font-family: 'Poppins', sans-serif;
+    }
+    .botonOrdenar {
+        grid-area: botonOrdenar;
+        padding-left: 90px;
+        padding-top: 40px;
+        
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 60px;
+        padding-top: 40px;
+    }
+    .cajitas{
+        padding: 30px;
+    }
+    .card-img-top{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    #botonAgregarCarrito{
+        width: 65%;
+    }
     .navbar {
         display: grid;
         grid-template-rows: 1fr;
@@ -102,12 +122,13 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
-            'imagenportada'
-            'formulario'
+            'imagenPortada'
+            'botonOrdenar'
+            'productos'
             'informacion'
             'footer1';
         gap: 0px;
@@ -132,10 +153,30 @@ a {
 
 /*Escritorio*/
 @media(min-width:900px) {
+    .imagenPortada {
+        grid-area: imagenPortada;
+        background-image: url(/img/imagenPortadaProductos.png);
+        backdrop-filter: blur(49px);
+        height: 350px;
+        background-size: cover;
+        background-position: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;        
+        font-family: 'Poppins', sans-serif;
+    }
+    .botonOrdenar {
+        grid-area: botonOrdenar;
+        padding-left: 135px;
+        padding-top: 50px;
+        
+    }
     .productos{
         display: grid;
         grid-template-columns: auto auto auto;
         padding: 100px;
+        padding-top: 50px;
     }
     .cajitas{
         padding: 35px;
