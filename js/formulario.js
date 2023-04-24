@@ -1,3 +1,4 @@
+
 let campDescripcion = document.getElementById("campDescrip");
 let campNombre = document.getElementById("campNombre");
 let Id = document.getElementById("campoId");
