@@ -25,6 +25,13 @@ a {
 
 }
 
+.formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
 .informacion{
     grid-area: informacion;
     padding: 50px;
