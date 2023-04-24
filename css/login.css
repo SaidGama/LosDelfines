@@ -31,14 +31,15 @@ a {
     grid-area: navbar;
     background-color: #3d71bb;
 
-}
+} 
 
-.formulario {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+
+@media screen and (min-width: 768px) {
+    .form-container > .form-col {
+        flex-basis: calc(50% - 10px);
+        margin: 0 5px;
+    }
+}
 
 .informacion{
     grid-area: informacion;
