@@ -8,6 +8,14 @@ body {
     min-height: 100%;
 }
 
+.form-control{
+    text-align: left
+}
+.ingr{
+    text-align: center
+}
+
+
 html {
     height: 100%;
     font-family:'Poppins';
