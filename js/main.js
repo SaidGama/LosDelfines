@@ -22,7 +22,7 @@ let botones = `
 
 let enlacesC2 = `<h5>Soporte</h5>
 <ul class="nav flex-column">
-    <li class="nav-item mb-2"><a href="./contactanos.html" class="nav-link p-0 text-white">Contactanos</a></li>
+    <li class="nav-item mb-2"><a href="./contactanos.html" class="nav-link p-0 text-white">Contáctanos</a></li>
     <li class="nav-item mb-2"><a href="https://wa.me/9999506963" target="_blank" class="nav-link p-0 text-white">+52 999 950 6963</a></li>
 </ul>`;
 let enlacesC3 = `<h5>Cuenta</h5>
