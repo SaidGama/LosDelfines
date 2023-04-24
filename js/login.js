@@ -4,9 +4,6 @@ let contraseña = document.getElementById("Contraseña");
 let ConfiContraseña = document.getElementById("ConfiContraseña");
 
 
-function validarNombre(params) {
-
-}
 function validarCorreo(params) {}
 
 let correo = document.getElementById("Correo");
