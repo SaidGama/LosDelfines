@@ -9,7 +9,7 @@ function validarNombre(params) {
 }
 function validarCorreo(params) {}
 
-let correo = document.getElementById("correo");
+let correo = document.getElementById("Correo");
 let IdNombre = document.getElementById("IdNombre");
 
 
