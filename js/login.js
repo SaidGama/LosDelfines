@@ -2,6 +2,10 @@
 let campNumber = document.getElementById("campNumber");
 let contraseña = document.getElementById("Contraseña");
 let ConfiContraseña = document.getElementById("ConfiContraseña");
+
+
+function validarCorreo(params) {}
+
 let correo = document.getElementById("Correo");
 let IdNombre = document.getElementById("IdNombre");
 let correoValido = true;
@@ -119,3 +123,7 @@ function validarContrasena() {
 function validarDireccion(params) {
     
 }
+IdNombre.addEventListener("blur", function(event){
+    event.preventDefault;
+    IdNombre.value = IdNombre.value.trim();
+})
