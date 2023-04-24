@@ -81,7 +81,7 @@ btnClear.addEventListener("click",function(event){
 });//btn limpiar
 
    if (validarCorreo()==true && validarNum()== true && validarCampo()==true && esvalidoNombre == true){
-    console.log("ok! lo logramos")
+    console.log("ok! lo logramos");
 
     
     Email.send({
