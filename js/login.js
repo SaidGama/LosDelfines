@@ -77,4 +77,7 @@ function validarContrasena() {
 function validarDireccion(params) {
     
 }
-IdNombre.addEventListener("blur")
+IdNombre.addEventListener("blur", function(event){
+    event.preventDefault;
+    IdNombre.value = IdNombre.value.trim();
+})
