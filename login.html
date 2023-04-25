@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +11,13 @@
     <link rel="stylesheet" href="css/login.css">
     <title>Login</title>
 </head>
+
 <body class="grid-container">
-     <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav class="navbar ">
         <button class="navbar-toggler" type="button" id="botonNavbar">
             <span class="navbar-toggler-icon"></span>
-        </button> 
-  
-    </button>
+        </button>
         <div class="img-container">
             <img src="./img/Group 13LogoLosD.png" alt="LogoDelfines" class="logoDelfin">
         </div>
@@ -28,97 +28,91 @@
 
         </div>
         <div class="navlinksContainer" id="containerDivlinks" style="display: none;">
-            <a href="./productos.html" >Productos</a>
-            <a href="./AcercadeNosotros.html" >¿Quiénes Somos?</a>
-            <a href="NuestrosServicios.html" >Nuestros servicios</a>
+            <a href="./productos.html">Productos</a>
+            <a href="./AcercadeNosotros.html">¿Quiénes Somos?</a>
+            <a href="NuestrosServicios.html">Nuestros servicios</a>
             <a href="./contactanos.html">Contáctanos</a>
-        </div> 
-       
+        </div>
     </nav>
 
-<!--Formulario-->
-<div class="container formulario">
-    
-    <h1>Registrate</h1>
-    <br>
-    <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertErrorLogin">
-        <p id="alertErrorTextoLogin"> </p>
-      </div>
-    <form class="row g-3">
-        <div class="col-md-6">
-            <br>
-            <label class="form-label">Nombre completo</label>
-            <input type="text" class="form-control" id="IdNombre">
-        </div>
 
-        <div class="col-md-6">
+    <!--Formulario-->
+    <div class="registrate">
+
+        <h1>Registrate</h1>
+
+        <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertErrorLogin">
+            <p id="alertErrorTextoLogin"> </p>
+        </div>
+        <form class="col">
+            <div class="row-md-6">
+                <br>
+                <label class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="IdNombre">
+            </div>
+
+            <div class="row-md-6">
+                <br>
+                <label class="form-label">Correo</label>
+                <input type="text" class="form-control" id="Correo">
+            </div>
+
+            <div class="row-md-6">
+                <label class="form-label">Numero de telefono</label>
+                <input type="input" class="form-control" id="campNumber">
+            </div>
+
+            <div class="row-md-6">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="Contraseña">
+            </div>
+            <div class="row-md-6">
+                <label class="form-label">Confirmar tu contraseña</label>
+                <input type="password" class="form-control" id="ConfiContraseña">
+            </div>
+            <div class="row-md-6">
+                <label class="form-label">Dirección</label>
+                <input type="number" class="form-control" id="IdDirección">
+            </div>
+
+            <div class="row-12">
+                <button type="add" class="btn btn-primary" id="botonCrear">Registrate</button>
+            </div>
+        </form>
+    </div>
+    <div class="ingresar">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <h2 class="ingr">INGRESAR</h2>
             <br>
             <label class="form-label">Correo</label>
-            <input type="text" class="form-control"  id="Correo">
-        </div>
-
-        <div class="col-md-6">
-            <label class="form-label">Numero de telefono</label>
-            <input type="number"  class="form-control" id="campNumber">
-        </div>
-
-        <div class="col-md-6">
-            <label class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="Contraseña">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Confirmar tu contraseña</label>
-            <input type="password" class="form-control" id="ConfiContraseña">
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Dirección</label>
-            <input type="number" class="form-control" id="IdDirección">
-        </div>
-
-        <div class="col-12">
-            <button type="add" class="btn btn-primary" id="botonCrear">Registrate</button>
-        </div>
-    </form>
-</div>
-    
-    <br>
-    <div class="formulario">
-       
-        <div class="ingresar">
-            <div class="shadow p-3 mb-5 bg-white rounded">
-              <h2 class="ingr">INGRESAR</h2>
-              <br>
-              <label class="form-label">Correo</label>
-              <input type="description" class="form-control" placeholder="Ingresa tu correo" id="correo">
-              <div class="contraseña">
-                 <label class="form-label">Contraseña</label>
-                 <input type="nombre" class="form-control" placeholder="contraseña" id="contraseña">
-                  <p class="ingr">¿OLVIDASTE TU CONTRASEÑA <p>
-                     <div class="col-12">
-                     <button type="add" class="btn btn-primary"  id="botonIngresar">INGRESAR</button>
-                     </div>
-             </div>
+            <input type="description" class="form-control" placeholder="Ingresa tu correo" id="correo">
+            <div class="contraseña">
+                <label class="form-label">Contraseña</label>
+                <input type="nombre" class="form-control" placeholder="contraseña" id="contraseña">
+                <p class="ingr">¿OLVIDASTE TU CONTRASEÑA
+                <p>
+                <div class="col-12">
+                    <button type="add" class="btn btn-primary" id="botonIngresar">INGRESAR</button>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-    <br>
-
     <!-- FOOTER -->
     <footer class="footer1 align-items-center p-3 mb-2 bg-footer text-white">
 
         <div class="col1 mb-3">
-        </div>  
+        </div>
         <div class="col2 mb-3" id="footerC2">
-           
+
         </div>
         <div class="col3 mb-3" id="footerC3">
-            
+
         </div>
         <div class="col4 mb-3" id="footerC4">
-           
+
         </div>
         <div class="col5 mb-3" id="footerC5">
-            
+
         </div>
         <div class="col6 mb-3">
         </div>
@@ -139,4 +133,5 @@
         integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

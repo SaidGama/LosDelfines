@@ -33,17 +33,7 @@ a {
 
 }
 
-.formulario {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
 
-.informacion{
-    grid-area: informacion;
-    padding: 50px;
-}
 
 /*VistaCelular*/
 @media(max-width: 899px) {
@@ -87,6 +77,7 @@ a {
         padding-right: 5%;
     }
 
+
     .lista {
         list-style-type: none;
     }
@@ -96,15 +87,23 @@ a {
         display: none;
     }
 
+    .registrate {
+        grid-area: registrate;
+        padding: 50px;
+    }
+    
+    .ingresar{
+        grid-area: ingresar;
+        padding: 50px;
+    }
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
-            'imagenportada'
-            'formulario'
-            'informacion'
+            'registrate'
+            'ingresar'
             'footer1';
         gap: 0px;
         height: 100%;
@@ -180,6 +179,15 @@ a {
         width: 30px;
         height: 40px;
     }
+    .registrate {
+        grid-area: registrate;
+        padding: 50px;
+    }
+    
+    .ingresar{
+        grid-area: ingresar;
+        padding: 50px;
+    }
 
     .grid-container {
         display: grid;
@@ -187,8 +195,8 @@ a {
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
-            'imagenportada imagenportada'
-            'formulario  informacion'
+            'registrate ingresar'
+            'registrate  ingresar'
             'footer1 footer1';
         gap: 0px;
         height: 100%;
