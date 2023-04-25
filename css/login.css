@@ -41,10 +41,6 @@ a {
     }
 }
 
-.informacion{
-    grid-area: informacion;
-    padding: 50px;
-}
 
 /*VistaCelular*/
 @media(max-width: 899px) {
@@ -88,27 +84,33 @@ a {
         padding-right: 5%;
     }
 
+
     .lista {
         list-style-type: none;
     }
 
-    .nav-item {
-        display: none;
-    }
 
     .enlaces-container {
         display: none;
     }
 
+    .registrate {
+        grid-area: registrate;
+        padding: 50px;
+    }
+    
+    .ingresar{
+        grid-area: ingresar;
+        padding: 50px;
+    }
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
-            'imagenportada'
-            'formulario'
-            'informacion'
+            'registrate'
+            'ingresar'
             'footer1';
         gap: 0px;
         height: 100%;
@@ -116,21 +118,17 @@ a {
     /* footer */
     .footer1 {
         display: grid; 
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-         'col2 col1'
-         'col3 col5'
-         'col4 col6';
+         'col2 col3'
+         'col4 col5';
         
         gap: 0px;
         height: 100%;
     } /* Grid Footer */
 
 
-    .nav-item {
-        display: none;
-    }
     .enlaces-container {
         display: none;
     }
@@ -188,6 +186,15 @@ a {
         width: 30px;
         height: 40px;
     }
+    .registrate {
+        grid-area: registrate;
+        padding: 50px;
+    }
+    
+    .ingresar{
+        grid-area: ingresar;
+        padding: 50px;
+    }
 
     .grid-container {
         display: grid;
@@ -195,8 +202,8 @@ a {
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
-            'imagenportada imagenportada'
-            'formulario  informacion'
+            'registrate ingresar'
+            'registrate  ingresar'
             'footer1 footer1';
         gap: 0px;
         height: 100%;
@@ -252,7 +259,8 @@ a {
     grid-area: col2;
     padding: auto;
     text-align: center;
-
+    position: relative;
+    bottom: 15px;
 }
 
 .col3 {
@@ -271,6 +279,8 @@ a {
     grid-area: col5;
     padding: auto;
     text-align: center;
+    position: relative;
+    bottom: 34px;
 }
 
 .col6 {

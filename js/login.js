@@ -11,13 +11,59 @@ let IdNombre = document.getElementById("IdNombre");
 let correoValido = true;
 let nombreValido = true;
 let botonCrear = document.getElementById("botonCrear");
+let alertErrorTextoLogin = document.getElementById("alertErrorTextoLogin");
+let alertErrorLogin = document.getElementById("alertErrorLogin");
+let idTimeout;
 
 botonCrear.addEventListener("click", function (event) {
     event.preventDefault();
+    clearTimeout(idTimeout);
+    alertErrorTextoLogin.innerHTML="";
+    alertErrorLogin.style.display="none";
+    let NombreErrores= "Los siguientes campos deben ser llenados correctamente:<ul>";
+
+    if (!validarNombre()){
+        NombreErrores += "<li>Escribe un nombre válido.</li>";
+        alertErrorLogin.style.display="block";
+    } else{
+        IdNombre.style.border="solid thin green";    
+    }// if validarNombre
+
+
+
+    if (!validarCorreo()){
+        NombreErrores += "<li>Escribe un correo válido.</li>";
+        alertErrorLogin.style.display="block";
+    } else{
+        correo.style.border="solid thin green";    
+    }//if validarCorreo
+
+
+    if (!validarNumero()){
+        NombreErrores += "<li>Escribe un número válido.</li>";
+        alertErrorLogin.style.display="block";
+    } else{
+        campNumber.style.border="solid thin green";    
+    }//if validarCorreo
+
+
+    if (!validarContrasena()){
+        NombreErrores += "<li>Escribe una contraseña válida.</li>";
+        alertErrorLogin.style.display="block";
+    } else{
+        contraseña.style.border="solid thin green";    
+    }//if validarCorreo
+
+    NombreErrores += "</ul>";
+    alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
+    idTimeout=setTimeout (function(){
+        alertErrorLogin.style.display="none";
+    }, 5000);
+
     if (validarNombre()==true && validarCorreo()==true && validarNumero()==true &&
         validarContrasena() ==true) {
             console.log("ok! lo logramos");
-    }
+    }//If todas las validaciones
 });
 function validarNombre() {
     nombreValido = true;
