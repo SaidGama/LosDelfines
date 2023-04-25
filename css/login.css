@@ -33,15 +33,7 @@ a {
 
 }
 
-.registrate {
-    grid-area: registrate;
-    padding: 20px;
-  }
 
-.ingresar{
-    grid-area: ingresar;
-    padding: 50px;
-}
 
 /*VistaCelular*/
 @media(max-width: 899px) {
@@ -95,6 +87,15 @@ a {
         display: none;
     }
 
+    .registrate {
+        grid-area: registrate;
+        padding: 50px;
+    }
+    
+    .ingresar{
+        grid-area: ingresar;
+        padding: 50px;
+    }
     .grid-container {
         display: grid;
         grid-template-rows: auto auto auto auto;
@@ -177,6 +178,15 @@ a {
     #carrito {
         width: 30px;
         height: 40px;
+    }
+    .registrate {
+        grid-area: registrate;
+        padding: 50px;
+    }
+    
+    .ingresar{
+        grid-area: ingresar;
+        padding: 50px;
     }
 
     .grid-container {
