@@ -55,7 +55,6 @@ a {
     .productos{
         display: grid;
         grid-template-columns: auto;
-        padding: 60px;
         padding-top: 40px;
     }
     .cajitas{
@@ -142,8 +141,8 @@ a {
         list-style-type: none;
     }
 
-   
 
+    
     .enlaces-container {
         display: none;
     }
