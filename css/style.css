@@ -28,7 +28,7 @@ a {
 /*VistaCelular*/
 @media(max-width: 899px) {
     .topnav {
-        background-color: #333;
+        background-color: #3d71bb;
         grid-area: topnav;
         height: 0;
     }
