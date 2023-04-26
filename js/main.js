@@ -56,10 +56,14 @@ window.addEventListener("load", function (event) {
 });
 
 function myFunction() {
+    //var topnav = document.querySelector(".topnav");
+    let topnav = document.getElementById("topnav");
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
       x.style.display = "none";
+      topnav.style.height = "0";
     } else {
       x.style.display = "block";
+      topnav.style.height = "100%";
     }
 }
