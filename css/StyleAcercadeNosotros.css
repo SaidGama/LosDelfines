@@ -117,6 +117,10 @@ a {
         transition: .78s;
         
       }
+      .navbar-toggler-icon {
+        display: block;
+        margin: 0 auto;
+      }
     .navbar {
         display: grid;
         grid-template-rows: auto auto;
