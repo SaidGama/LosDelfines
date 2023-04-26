@@ -23,6 +23,10 @@ a {
     background-color: #3d71bb;
 
 }
+.tituloCont{
+    color: #3d71bb;
+    padding-bottom: 20px;
+}
 
 .formulario{
     grid-area: formulario;

@@ -9,10 +9,14 @@ body {
 }
 
 .form-control{
-    text-align: left
+    text-align: left;
 }
 .ingr{
-    text-align: center
+    text-align: center;
+    color: #3d71bb;
+}
+.tituloLog{
+    color: #3D71BB;
 }
 
 
