@@ -85,16 +85,10 @@ a {
 
 .columna1 {
     grid-area: columna1;
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: justify;
 }
 
 .columna2 {
     grid-area: columna2;
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: justify;
 }
 
 
