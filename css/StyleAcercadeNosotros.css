@@ -301,7 +301,85 @@ a {
 
 }
 
-
+/*================CSS CARDS======================*/
+.bodyCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    background: rgb(9, 74, 136);
+    flex-wrap: wrap;
+}
+.cardTeam{
+    position:relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+.cardTeam .face {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.cardTeam .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+.cardTeam .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardTeam .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height:45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+.cardTeam .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #3D71BB;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.cardTeam .back .links {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+.cardTeam .back .links a {
+    color: #f3f3f3;
+}
+.cardTeam .back h5 {
+    font-size: 30px;
+    margin-top:20px;
+    letter-spacing: 2px;
+}
+.cardTeam .back p {
+    letter-spacing: 0px;
+    text-align: justify;
+}
+.cardTeam:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+.cardTeam:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+/*================FIN CSS CARDS======================*/
 
 /*==================CSS FOOTER========================*/
 .bg-footer {
