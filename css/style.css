@@ -104,13 +104,13 @@ a {
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
-            'imagenportada'
+            'olas'
             'footer1';
         gap: 0px;
         height: auto;
     }
-    .imagenportada{
-        grid-area: imagenportada;
+    .olas{
+        grid-area: olas;
         margin-top: -5px;
     }
 
@@ -193,13 +193,13 @@ a {
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
-            'imagenportada'
+            'olas'
             'footer1';
         gap: 0px;
         height: auto;
     }
-    .imagenportada{
-        grid-area: imagenportada;
+    .olas{
+        grid-area: olas;
         margin-top: -5px;
     }
 
@@ -217,9 +217,6 @@ a {
 
     /* Grid Footer */
 }
-
-
-
 
 
 
