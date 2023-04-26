@@ -51,7 +51,9 @@ a {
         color: black;
         transition: .78s;
         
+        
       }
+      
     .navbar {
         display: grid;
         grid-template-rows: auto auto;
