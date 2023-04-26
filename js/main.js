@@ -42,7 +42,7 @@ let enlacesC4 = ` <h5>Información</h5>
 let enlacesC5 = `<h5>Redes Sociales</h5>
 <a href="https://www.facebook.com/edithaguadelfines?mibextid=ZbWKwL" target="_blank"><img src="./img/Facebook.png" alt="Icono" width="50px" height="50px" id="facebook" class="facebook"></a>
 <a href="https://www.instagram.com/" target="_blank"><img src="./img/icon-instagram.png" alt="Icono" width="50px" height="50px" class="instagram"></a>
-<a href="https://wa.me/9999506963" target="_blank"><img src="./img/whatsapp.png" alt="Icono" width="50px" height="50px" class="whatsapp"></a>`
+<a href="https://wa.me/9999493508" target="_blank"><img src="./img/whatsapp.png" alt="Icono" width="50px" height="50px" class="whatsapp"></a>`
 
 window.addEventListener("load", function (event) {
     event.preventDefault;
@@ -56,10 +56,14 @@ window.addEventListener("load", function (event) {
 });
 
 function myFunction() {
+    //var topnav = document.querySelector(".topnav");
+    let topnav = document.getElementById("topnav");
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
       x.style.display = "none";
+      topnav.style.height = "0";
     } else {
       x.style.display = "block";
+      topnav.style.height = "100%";
     }
 }

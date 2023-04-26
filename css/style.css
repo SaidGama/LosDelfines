@@ -4,31 +4,6 @@
     margin: 0;
 }
 
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-  }
-  
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-    text-align: center; 
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  
 body {
     min-height: 100%;
 }
@@ -49,13 +24,34 @@ a {
 
 }
 
-.informacion {
-    grid-area: informacion;
-    padding: 50px;
-}
 
 /*VistaCelular*/
 @media(max-width: 899px) {
+    .topnav {
+        background-color: #3d71bb;
+        grid-area: topnav;
+        height: 0;
+    }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        text-align: center; 
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        transition: .78s;
+        
+      }
     .navbar {
         display: grid;
         grid-template-rows: auto auto;
@@ -63,14 +59,8 @@ a {
         grid-template-areas:
             'menuBoton img-container login-container'
             'topnav     topnav       topnav';
-        height: auto;
-        padding: 0;
-        
+        height: auto;    
     }
-    .topnav{
-        grid-area: topnav;
-    }
-
     .logoDelfin {
         width: 100%;
         height: 100%;
@@ -112,16 +102,18 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
             'imagenportada'
-            'formulario'
-            'informacion'
             'footer1';
         gap: 0px;
-        height: 100%;
+        height: auto;
+    }
+    .imagenportada{
+        grid-area: imagenportada;
+        margin-top: -5px;
     }
 
     /* footer */
@@ -146,6 +138,9 @@ a {
     .navbar-toggler {
         display: none;
     }
+    .navbar-toggler-icon{
+        display: none;
+    }
 
     .navbar {
         display: grid;
@@ -155,8 +150,8 @@ a {
         grid-template-areas:
             '. img-container img-container img-container login-container'
             '. enlaces-container enlaces-container enlaces-container login-container';
-        height: 270px;
-        width: 100%;
+        height: auto;
+        width: auto;
     }
 
     /* CSS NAVBAR */
@@ -199,15 +194,18 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
         grid-template-areas:
-            'navbar navbar'
-            'imagenportada imagenportada'
-            'formulario  informacion'
-            'footer1 footer1';
+            'navbar'
+            'imagenportada'
+            'footer1';
         gap: 0px;
-        height: 100%;
+        height: auto;
+    }
+    .imagenportada{
+        grid-area: imagenportada;
+        margin-top: -5px;
     }
 
     .footer1 {
