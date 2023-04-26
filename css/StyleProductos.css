@@ -44,6 +44,7 @@ a {
         justify-content: center;
         color: white;        
         font-family: 'Poppins', sans-serif;
+        margin-top: -6%;
     }
     .botonOrdenar {
         grid-area: botonOrdenar;
@@ -120,10 +121,11 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
+            'olas'
             'imagenPortada'
             'botonOrdenar'
             'productos'
@@ -132,6 +134,12 @@ a {
         gap: 0px;
         height: 100%;
     }
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
+        z-index: 1;
+    }
+
 
     /* footer */
     .footer1 {
@@ -162,6 +170,7 @@ a {
         justify-content: center;
         color: white;        
         font-family: 'Poppins', sans-serif;
+        margin-top: -6%;
     }
     .botonOrdenar {
         grid-area: botonOrdenar;
@@ -241,16 +250,22 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
+            'olas   olas'
             'imagenPortada imagenPortada'
             'botonOrdenar  botonOrdenar'
             'productos     productos'
             'footer1 footer1';
         gap: 0px;
         height: 100%;
+    }
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
+        z-index: 1;
     }
 
     .footer1 {

@@ -88,16 +88,21 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
+            'olas'
             'imagenportada'
             'formulario'
             'informacion'
             'footer1';
         gap: 0px;
         height: 100%;
+    }
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
     }
     /* footer */
     .footer1 {
@@ -167,15 +172,20 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
+            'olas   olas'
             'imagenportada imagenportada'
             'formulario  informacion'
             'footer1 footer1';
         gap: 0px;
         height: 100%;
+    }
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
     }
     .footer1 {
         display: grid;
