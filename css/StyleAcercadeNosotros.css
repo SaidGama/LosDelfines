@@ -47,9 +47,7 @@ a {
     background-color: #3d71bb;
 }
 
-.imagenportada {
-    grid-area: imagenportada;
-}
+
 
 .fotoportada {
     width: 100%;
@@ -144,10 +142,11 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
+            'olas'
             'imagenportada'
             'articulo1'
             'articulo2'
@@ -158,7 +157,14 @@ a {
         gap: 0px;
         height: 100%;
     }
-
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
+    }
+    .imagenportada {
+        grid-area: imagenportada;
+        margin-top: -5.6%;
+    }
     .columna1 {
         grid-area: columna1;
 
@@ -265,16 +271,25 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
+            'olas   olas'
             'imagenportada imagenportada'
             'articulo1 articulo2'
             'tituloEquipo tituloEquipo'
             'columna1 columna2'
             'columna1 columna2'
             'footer1 footer1';
+    }
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
+    }
+    .imagenportada {
+        grid-area: imagenportada;
+        margin-top: -6%;
     }
 
     .footer1 {
