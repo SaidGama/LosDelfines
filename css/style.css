@@ -141,6 +141,9 @@ a {
     .navbar-toggler-icon{
         display: none;
     }
+    #myLinks{
+        display: none;
+    }
 
     .navbar {
         display: grid;
@@ -207,6 +210,7 @@ a {
         grid-area: olas;
         margin-top: -5px;
     }
+    
 
     .footer1 {
         display: grid;

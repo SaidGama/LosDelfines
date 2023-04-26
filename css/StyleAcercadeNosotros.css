@@ -92,16 +92,41 @@ a {
 
 /*VistaCelular*/
 @media(max-width: 899px) {
+    .topnav {
+        background-color: #3d71bb;
+        grid-area: topnav;
+        height: 0;
+    }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        text-align: center; 
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        transition: .78s;
+        
+      }
     .navbar {
         display: grid;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto auto;
         grid-template-columns: 1fr 50% 25%;
         grid-template-areas:
-            'menuBoton img-container login-container';
-        height: auto;
-        padding: 0;
+            'menuBoton img-container login-container'
+            'topnav     topnav       topnav';
+        height: auto;    
     }
-
+    
     .logoDelfin {
         width: 100%;
         height: 100%;
@@ -167,13 +192,9 @@ a {
     }
     .columna1 {
         grid-area: columna1;
-
-
     }
-
     .columna2 {
         grid-area: columna2;
-
     }
 
     /* footer */
@@ -219,7 +240,6 @@ a {
     .navbar-toggler {
         display: none;
     }
-
     .navbar {
         display: grid;
         grid-template-rows: 60% 40%;
@@ -228,6 +248,16 @@ a {
         grid-template-areas:
             '. img-container img-container img-container login-container'
             '. enlaces-container enlaces-container enlaces-container login-container';
+    }
+    #myLinks{
+        display: none;
+    }
+    .topnav{
+        display: none;
+
+    }
+    .navbar-toggler-icon{
+        display: none;
     }
 
     /* CSS NAVBAR */
