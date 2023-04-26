@@ -46,7 +46,10 @@ a {
         grid-area: topnav;
         height: 0;
     }
-      
+    .navbar-toggler-icon {
+        display: block;
+        margin: 0 auto;
+      }
       .topnav #myLinks {
         display: none;
       }
