@@ -34,7 +34,7 @@ a {
 @media(max-width: 899px) {
     .imagenPortada {
         grid-area: imagenPortada;
-        background-image: url(https://github.com/SaidGama/LosDelfines/blob/develop/img/imagenPortadaProductos.png?raw=true);
+        background-image: url("/img/imagenPortadaProductos.png");
         backdrop-filter: blur(49px);
         height: 350px;
         background-size: cover;
@@ -189,7 +189,7 @@ a {
 @media(min-width:900px) {
     .imagenPortada {
         grid-area: imagenPortada;
-        background-image: url(https://github.com/SaidGama/LosDelfines/blob/develop/img/imagenPortadaProductos.png?raw=true);
+        background-image: url("/img/imagenPortadaProductos.png");
         backdrop-filter: blur(49px);
         height: 350px;
         background-size: cover;
