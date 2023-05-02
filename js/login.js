@@ -2,10 +2,7 @@
 let campNumber = document.getElementById("campNumber");
 let contraseña = document.getElementById("Contraseña");
 let ConfiContraseña = document.getElementById("ConfiContraseña");
-
-
-function validarCorreo(params) {}
-
+let botonIngresar = document.getElementById("botonIngresar");
 let correo = document.getElementById("Correo");
 let IdNombre = document.getElementById("IdNombre");
 let correoValido = true;
@@ -14,60 +11,74 @@ let botonCrear = document.getElementById("botonCrear");
 let alertErrorTextoLogin = document.getElementById("alertErrorTextoLogin");
 let alertErrorLogin = document.getElementById("alertErrorLogin");
 let idTimeout;
+let arrayUsuarios = [];
+let correoLogin = document.getElementById("correoLogin");
+let contraseñaLogin = document.getElementById("contraseñaLogin");
 
 botonCrear.addEventListener("click", function (event) {
     event.preventDefault();
     clearTimeout(idTimeout);
-    alertErrorTextoLogin.innerHTML="";
-    alertErrorLogin.style.display="none";
-    let NombreErrores= "Los siguientes campos deben ser llenados correctamente:<ul>";
+    alertErrorTextoLogin.innerHTML = "";
+    alertErrorLogin.style.display = "none";
+    let NombreErrores = "Los siguientes campos deben ser llenados correctamente:<ul>";
 
-    if (!validarNombre()){
+    if (!validarNombre()) {
         NombreErrores += "<li>Escribe un nombre válido.</li>";
-        alertErrorLogin.style.display="block";
-    } else{
-        IdNombre.style.border="solid thin green";    
+        alertErrorLogin.style.display = "block";
+    } else {
+        IdNombre.style.border = "solid thin green";
     }// if validarNombre
 
 
 
-    if (!validarCorreo()){
+    if (!validarCorreo()) {
         NombreErrores += "<li>Escribe un correo válido.</li>";
-        alertErrorLogin.style.display="block";
-    } else{
-        correo.style.border="solid thin green";    
+        alertErrorLogin.style.display = "block";
+    } else {
+        correo.style.border = "solid thin green";
     }//if validarCorreo
 
 
-    if (!validarNumero()){
+    if (!validarNumero()) {
         NombreErrores += "<li>Escribe un número válido.</li>";
-        alertErrorLogin.style.display="block";
-    } else{
-        campNumber.style.border="solid thin green";    
+        alertErrorLogin.style.display = "block";
+    } else {
+        campNumber.style.border = "solid thin green";
     }//if validarCorreo
 
 
-    if (!validarContrasena()){
+    if (!validarContrasena()) {
         NombreErrores += "<li>Escribe una contraseña válida.</li>";
-        alertErrorLogin.style.display="block";
-    } else{
-        contraseña.style.border="solid thin green";    
+        alertErrorLogin.style.display = "block";
+    } else {
+        contraseña.style.border = "solid thin green";
     }//if validarCorreo
 
     NombreErrores += "</ul>";
     alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
-    idTimeout=setTimeout (function(){
-        alertErrorLogin.style.display="none";
+    idTimeout = setTimeout(function () {
+        alertErrorLogin.style.display = "none";
     }, 5000);
 
-    if (validarNombre()==true && validarCorreo()==true && validarNumero()==true &&
-        validarContrasena() ==true) {
-            console.log("ok! lo logramos");
-    }//If todas las validaciones
+    if (validarNombre() == true && validarCorreo() == true && validarNumero() == true && validarContrasena() == true) {
+        let usuario = `{
+            "IdNombre": "${IdNombre.value}", 
+            "correo": "${correo.value}", 
+            "campNumber": "${campNumber.value}", 
+            "contraseña": "${contraseña.value}"}`;
+            
+        if (validarUsuarioRegistrado(correo.value)) {
+            arrayUsuarios.push(JSON.parse(usuario));
+            localStorage.setItem("arrayUsuarios", JSON.stringify(arrayUsuarios));
+        }else{
+            console.log("correo ya registrado");
+        }
+        
+    }//mandar datos de registro
 });
 function validarNombre() {
     nombreValido = true;
-    if(/^[a-zA-Z ]+$/.test(IdNombre.value)==false){
+    if (/^[a-zA-Z ]+$/.test(IdNombre.value) == false) {
         IdNombre.style.border = "solid thin red";
         nombreValido = false;
     } else {
@@ -77,10 +88,10 @@ function validarNombre() {
 }
 function validarCorreo() {
     correoValido = true;
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo.value)==false){
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo.value) == false) {
         correo.style.border = "solid thin red";
         correoValido = false;
-    }else{
+    } else {
         correo.style.border = "solid thin green";
         return true;
     }
@@ -121,9 +132,102 @@ function validarContrasena() {
 }// confirmarContra*/
 
 function validarDireccion(params) {
-    
+
 }
-IdNombre.addEventListener("blur", function(event){
+IdNombre.addEventListener("blur", function (event) {
     event.preventDefault;
     IdNombre.value = IdNombre.value.trim();
 })
+
+
+function validarUsuarioRegistrado(correo) {
+    if (localStorage.getItem("arrayUsuarios") != null) {
+        arrayUsuarios = JSON.parse(localStorage.getItem("arrayUsuarios"));
+        for (let i = 0; i < arrayUsuarios.length; i++) {
+            console.log(arrayUsuarios[i]);
+            if (arrayUsuarios[i]["correo"].includes(correo)) {
+              return false;
+            }
+          }
+    }
+    return true;
+}
+
+
+
+
+
+function validarCorreoLogin() {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correoLogin.value) == false) {
+        correoLogin.style.border = "solid thin red";
+    } else {
+        correoLogin.style.border = "solid thin green";
+        return true;
+    }
+}
+function validarContrasenaLogin() {
+    if (/^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[a-z]).{8,}$/.test(contraseñaLogin.value) == false) {
+        contraseñaLogin.style.border = "solid thin red";
+    } else {
+        contraseñaLogin.style.border = "solid thin green";
+        return true;
+    }//if else
+}
+
+botonIngresar.addEventListener("click", function (event) {
+    event.preventDefault();
+    clearTimeout(idTimeout);
+    alertErrorTextoLogin.innerHTML = "";
+    alertErrorLogin.style.display = "none";
+    let NombreErrores = "Los siguientes campos deben ser llenados correctamente:<ul>";
+
+   
+    if (!validarCorreoLogin()) {
+        NombreErrores += "<li>Escribe un correo válido.</li>";
+        alertErrorLogin.style.display = "block";
+    } else {
+        correoLogin.style.border = "solid thin green";
+    }//if validarCorreo
+
+    if (!validarContrasenaLogin()) {
+        NombreErrores += "<li>Escribe una contraseña válida.</li>";
+        alertErrorLogin.style.display = "block";
+    } else {
+        contraseñaLogin.style.border = "solid thin green";
+    }//if validarCorreo
+
+    NombreErrores += "</ul>";
+    alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
+    idTimeout = setTimeout(function () {
+        alertErrorLogin.style.display = "none";
+    }, 5000);
+
+
+    if (validarCorreoLogin() == true && validarContrasenaLogin() == true) {
+        
+        if (validarUsuarioLogin(correoLogin.value,contraseñaLogin.value)) {
+                console.log("INICIO DE SESION EXITOSO");
+                window.location.replace("./index.html");
+
+                
+        }else{4
+            console.log("USUARIO NO REGISTRADO");
+            correoLogin.style.border = "solid thin red";
+            contraseñaLogin.style.border = "solid thin red";
+        }
+        
+    }//mandar datos de registro
+});
+
+function validarUsuarioLogin(correo,contra) {
+    if (localStorage.getItem("arrayUsuarios") != null) {
+        arrayUsuarios = JSON.parse(localStorage.getItem("arrayUsuarios"));
+        for (let i = 0; i < arrayUsuarios.length; i++) {
+            console.log(arrayUsuarios[i]);
+            if ((arrayUsuarios[i]["correo"] === (correo)) && (arrayUsuarios[i]["contraseña"] === contra) ) {
+              return true;
+            }
+        }
+    }
+    return false;
+}
