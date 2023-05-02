@@ -8,13 +8,27 @@ let btnCrear = document.getElementById("botonCrear");
 let arrayProductos = [];
 let inputImagen = document.getElementById('inputImagen');
 let src = "";
+let alertError = document.getElementById("alertError");
+let alertErrorTexto = document.getElementById("alertErrorTexto");
+let idTimeout;
 const reader = new FileReader();
 
 
 btnCrear.addEventListener("click", function (event) {
     event.preventDefault();
-    if (validacionCampoID() == true && validacionCampoNombre() == true && validacionPrecio() == true && validacionDescripcion() == true
-        && validacionStock() == true && validacionImagen() == true) {
+    clearTimeout(idTimeout);
+    alertErrorTexto.innerHTML="";
+    alertError.style.display="none";
+    let Nombre= "Los siguientes campos deben ser llenados correctamente:<ul>";
+    let validacionCampoIDFuction = validacionCampoID();
+    let validacionCampoNombreFuction = validacionCampoNombre();
+    let validacionCampoPrecioFuction=validacionPrecio();
+    let validacionCampoDescripcionFuction= validacionDescripcion();
+    let validacionCampoStockFuction = validacionStock();
+    let validacionCampoImagenFuction = validacionImagen();
+    if (validacionCampoIDFuction == true && validacionCampoNombreFuction == true && validacionCampoPrecioFuction == true && 
+        validacionCampoDescripcionFuction == true
+        && validacionCampoStockFuction == true && validacionCampoImagenFuction == true) {
         const file = inputImagen.files[0];
         reader.addEventListener("load", () => {
             // convert image file to base64 string
@@ -40,104 +54,90 @@ btnCrear.addEventListener("click", function (event) {
         if (file) {
             reader.readAsDataURL(file);
         }
+    }//ifCrear
 
+    function validacionCampoID() {
+        let regex = /^[a-zA-Z0-9]$/;
+        if (Id.value == "" || regex.test(Id.value)) {
+            Id.style.border = "solid thin red";
+            Nombre += "<li>Escribe un ID válido.</li>";
+            alertError.style.display="block";
+        } else {
+            Id.style.border = "solid thin green";
+            
+        }//if
+    }//validacionCampoID
+    
+    function validacionCampoNombre() {
+        if (campNombre.value <= 2 || campNombre.value > 50) {
+            campNombre.style.border = "solid thin red";
+            Nombre += "<li>Escribe un nombre válido.</li>";
+            alertError.style.display="block";
+           
+        } else {
+            campNombre.style.border = "solid thin green";
+            
+        }//if
+    }//validar Nombre
+    
+    function validacionPrecio() {
+        if ( Precio.value == "" || /^[a-zA-Z0-9]$/.test(Precio.value)) {
+            Precio.style.border = "solid thin red";
+            Nombre += "<li>Escribe un precio válido.</li>";
+            alertError.style.display="block";
+            return false;
+        } else {
+            Precio.style.border = "solid thin green";
+            return true;
+        }
+    }//validacionPrecio
+    
 
+    function validacionDescripcion() {
+        if (campDescripcion.value.length < 1 || campDescripcion.value.length > 150) {
+            campDescripcion.style.border = "solid thin red";
+            Nombre += "<li>Escribe una descripción válida.</li>";
+            alertError.style.display="block";
+            return false;
+        } else {
+            campDescripcion.style.border = "solid thin green";
+            return true;
+        }//validar la descripción breve con uno y menos de 50 caracteres
+    }//validacionDescripción 
+    
+    function validacionStock() {
+        if (Stock.value == "" || !/^([0-9])*$/.test(Stock.value)) {
+            
+            Stock.style.border = "solid thin red";
+            Nombre += "<li>Escribe un stock válido.</li>";
+            alertError.style.display="block";
+            return false;
+        } else {
+            Stock.style.border = "solid thin green";
+            return true;
+        }
     }
-});
-
-
-function validacionCampoID() {
-    let regex = /^[a-zA-Z0-9]{2}$/;
-    if (Id.value == "") {
-        alert("El campo de identificación no puede estar vacío.");
-        Id.style.border = "solid thin red";
-        return false;
-    } else if (!regex.test(Id.value)) {
-        alert("El campo de identificación debe ser de dos caracteres alfanuméricos.");
-        Id.style.border = "solid thin red";
-        return false;
-    } else {
-        Id.style.border = "solid thin green";
-        return true;
+    
+    function validacionImagen (){
+        if(inputImagen.value ==""){ 
+            inputImagen.style.border = "solid thin red";
+            Nombre += "<li>Ingresa una imagen válida.</li>";
+            alertError.style.display="block";
+            return false;
+        } else {
+            inputImagen.style.border = "solid thin green";
+            return true;  
+        }
     }
-}
 
-function validacionCampoNombre() {
-    if (campNombre.value == "") {
-        alert("El campo de nombre no puede estar vacío.");
-        campNombre.style.border = "solid thin red";
-        return false;
-    } else if (campNombre.value < 2) {
-        alert("El campo de nombre debe ser al menos 2 caracteres.");
-        campNombre.style.border = "solid thin red";
-        return false;
-    } else if (campNombre.value > 50) {
-        alert("El campo de nombre no debe ser mayor a 50 caracteres.");
-        campNombre.style.border = "solid thin red";
-        return false;
-    } else {
-        campNombre.style.border = "solid thin green";
-        return true;
-    }//if
-}//validar Nombre
+    Nombre += "</ul>";
+    alertErrorTexto.insertAdjacentHTML("beforeend", Nombre);
+    idTimeout=setTimeout (function(){
+        alertError.style.display="none";
+    }, 5000);
 
-function validacionPrecio() {
-    if (Precio.value == "") {
-        alert("El campo de precio no puede estar vacío.");
-        Precio.style.border = "solid thin red";
-        return false;
-    } else if (!/^([0-9])*$/.test(Precio.value)) {
-        alert(`El valor "${Precio.value}" no es un número`);
-        Precio.style.border = "solid thin red";
-        return false;
-    } else {
-        Precio.style.border = "solid thin green";
-        return true;
-    }
-}
+});//btnCrear
 
-
-
-function validacionDescripcion() {
-    if (campDescripcion.value.length < 1) {
-        campDescripcion.style.border = "solid thin red";
-        alert("El campo de descripción no puede estar vacío.");
-        return false;
-    } else if (campDescripcion.value.length > 150) {
-        campDescripcion.style.border = "solid thin red";
-        alert("El campo de descripción no puede ser mayor de 150 caracteres.");
-        return false;
-    } else {
-        campDescripcion.style.border = "solid thin green";
-        return true;
-    }//validar la descripción breve con uno y menos de 50 caracteres
-}//validacionDescripción 
-
-function validacionStock() {
-    if (Stock.value == "") {
-        alert("El campo de Stock no puede estar vacío.");
-        Stock.style.border = "solid thin red";
-        return false;
-    } else if (!/^([0-9])*$/.test(Stock.value)) {
-        alert(`El valor "${Stock.value}" no es un número`);
-        Stock.style.border = "solid thin red";
-        return false;
-    } else {
-        Stock.style.border = "solid thin green";
-        return true;
-    }
-}
-
-function validacionImagen (){
-    if(inputImagen.value ==""){
-        alert("El campo de Imagen no puede estar vacío.");
-        inputImagen.style.border = "solid thin red";
-        return false;
-    } else {
-        inputImagen.style.border = "solid thin green";
-        return true;  
-    }
-}
 
 campNombre.addEventListener("blur", function (event) {
     event.preventDefault();
