@@ -41,14 +41,42 @@ a {
 
 /*VistaCelular*/
 @media(max-width: 899px) {
+    .topnav {
+        background-color: #3d71bb;
+        grid-area: topnav;
+        height: 0;
+    }
+    .navbar-toggler-icon {
+        display: block;
+        margin: 0 auto;
+      }
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        text-align: center; 
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        transition: .78s;
+        
+      }
     .navbar {
         display: grid;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto auto;
         grid-template-columns: 1fr 50% 25%;
         grid-template-areas:
-            'menuBoton img-container login-container';
-        height: auto;
-        padding: 0;
+            'menuBoton img-container login-container'
+            'topnav     topnav       topnav';
+        height: auto;    
     }
 
     .logoDelfin {
@@ -102,15 +130,20 @@ a {
     }
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
+            'olas'
             'registrate'
             'ingresar'
             'footer1';
         gap: 0px;
         height: 100%;
+    }
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
     }
     /* footer */
     .footer1 {
@@ -134,7 +167,13 @@ a {
 
 /*Escritorio*/
 @media(min-width:900px) {
-    .navbar-toggler{
+    .navbar-toggler {
+        display: none;
+    }
+    .navbar-toggler-icon{
+        display: none;
+    }
+    #myLinks{
         display: none;
     }
     .navbar{
@@ -195,15 +234,20 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
+            'olas   olas'
             'registrate ingresar'
             'registrate  ingresar'
             'footer1 footer1';
         gap: 0px;
         height: 100%;
+    }
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
     }
     .footer1 {
         display: grid;

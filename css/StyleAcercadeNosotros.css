@@ -48,9 +48,7 @@ a {
 
 }
 
-.imagenportada {
-    grid-area: imagenportada;
-}
+
 
 .fotoportada {
     width: 100%;
@@ -86,31 +84,54 @@ a {
 
 .columna1 {
     grid-area: columna1;
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: justify;
 }
 
 .columna2 {
     grid-area: columna2;
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: justify;
 }
 
 
 /*VistaCelular*/
 @media(max-width: 899px) {
+    .topnav {
+        background-color: #3d71bb;
+        grid-area: topnav;
+        height: 0;
+    }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        text-align: center; 
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        transition: .78s;
+        
+      }
+      .navbar-toggler-icon {
+        display: block;
+        margin: 0 auto;
+      }
     .navbar {
         display: grid;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto auto;
         grid-template-columns: 1fr 50% 25%;
         grid-template-areas:
-            'menuBoton img-container login-container';
-        height: auto;
-        padding: 0;
+            'menuBoton img-container login-container'
+            'topnav     topnav       topnav';
+        height: auto;    
     }
-
+    
     .logoDelfin {
         width: 100%;
         height: 100%;
@@ -151,10 +172,11 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
+            'olas'
             'imagenportada'
             'articulo1'
             'articulo2'
@@ -165,16 +187,19 @@ a {
         gap: 0px;
         height: 100%;
     }
-
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
+    }
+    .imagenportada {
+        grid-area: imagenportada;
+        margin-top: -5.6%;
+    }
     .columna1 {
         grid-area: columna1;
-
-
     }
-
     .columna2 {
         grid-area: columna2;
-
     }
 
     /* footer */
@@ -220,7 +245,6 @@ a {
     .navbar-toggler {
         display: none;
     }
-
     .navbar {
         display: grid;
         grid-template-rows: 60% 40%;
@@ -229,6 +253,16 @@ a {
         grid-template-areas:
             '. img-container img-container img-container login-container'
             '. enlaces-container enlaces-container enlaces-container login-container';
+    }
+    #myLinks{
+        display: none;
+    }
+    .topnav{
+        display: none;
+
+    }
+    .navbar-toggler-icon{
+        display: none;
     }
 
     /* CSS NAVBAR */
@@ -272,16 +306,25 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
+            'olas   olas'
             'imagenportada imagenportada'
             'articulo1 articulo2'
             'tituloEquipo tituloEquipo'
             'columna1 columna2'
             'columna1 columna2'
             'footer1 footer1';
+    }
+    .olas{
+        grid-area: olas;
+        margin-top: -5px;
+    }
+    .imagenportada {
+        grid-area: imagenportada;
+        margin-top: -6%;
     }
 
     .footer1 {
@@ -302,7 +345,85 @@ a {
 
 }
 
-
+/*================CSS CARDS======================*/
+.bodyCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    background: rgb(9, 74, 136);
+    flex-wrap: wrap;
+}
+.cardTeam{
+    position:relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+.cardTeam .face {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.cardTeam .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+.cardTeam .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardTeam .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height:45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+.cardTeam .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #3D71BB;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.cardTeam .back .links {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+.cardTeam .back .links a {
+    color: #f3f3f3;
+}
+.cardTeam .back h5 {
+    font-size: 30px;
+    margin-top:20px;
+    letter-spacing: 2px;
+}
+.cardTeam .back p {
+    letter-spacing: 0px;
+    text-align: justify;
+}
+.cardTeam:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+.cardTeam:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+/*================FIN CSS CARDS======================*/
 
 /*==================CSS FOOTER========================*/
 .bg-footer {

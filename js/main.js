@@ -5,7 +5,8 @@ let footerC3 = document.getElementById("footerC3");
 let footerC4 = document.getElementById("footerC4");
 let footerC5 = document.getElementById("footerC5");
 
-let enlaces = `<a href="./productos.html" style="padding-left: 20px;" >Productos</a>
+let enlaces = `<a href="./index.html" style="padding-left: 20px;" >Inicio</a>
+                <a href="./productos.html" style="padding-left: 20px;" >Productos</a>
                 <a href="./AcercadeNosotros.html" style="padding-left: 20px;">¿Quiénes Somos?</a>
                 <a href="NuestrosServicios.html" style="padding-left: 20px;">Nuestros servicios</a>
                 <a href="./contactanos.html" style="padding-left: 20px;">Contáctanos</a>`

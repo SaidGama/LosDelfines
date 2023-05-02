@@ -13,11 +13,9 @@
 <body class="grid-container">
     <!-- NAVBAR -->
     <nav class="navbar ">
-        <button class="navbar-toggler" type="button" id="botonNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button> 
-  
-    </button>
+        <a href="javascript:void(0);" class="navbar-toggler-icon" onclick="myFunction()">
+
+        </a>
         <div class="img-container">
             <img src="./img/Group 13LogoLosD.png" alt="LogoDelfines" class="logoDelfin">
         </div>
@@ -28,13 +26,35 @@
 
         </div>
         <div class="navlinksContainer" id="containerDivlinks" style="display: none;">
-            <a href="./productos.html" >Productos</a>
-            <a href="./AcercadeNosotros.html" >¿Quiénes Somos?</a>
-            <a href="NuestrosServicios.html" >Nuestros servicios</a>
+            <a href="./productos.html">Productos</a>
+            <a href="./AcercadeNosotros.html">¿Quiénes Somos?</a>
+            <a href="NuestrosServicios.html">Nuestros servicios</a>
             <a href="./contactanos.html">Contáctanos</a>
-        </div> 
-       
+        </div>
+        <div class="topnav" id="topnav" style="border: none;">
+            <div id="myLinks">
+                <a href="./index.html">Inicio</a>
+                <a href="./productos.html">Productos</a>
+                <a href="./AcercadeNosotros.html">¿Quiénes Somos?</a>
+                <a href="NuestrosServicios.html">Nuestros servicios</a>
+                <a href="./contactanos.html">Contáctanos</a>
+            </div>
+        </div>
     </nav>
+    <div class="olas">
+        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                    <stop stop-color="rgba(61, 113, 187, 1)" offset="0%"></stop>
+                    <stop stop-color="rgba(68.9, 143.977, 250.816, 1)" offset="100%"></stop>
+                </linearGradient>
+            </defs>
+            <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+                d="M0,70L10,70C20,70,40,70,60,65C80,60,100,50,120,53.3C140,57,160,73,180,73.3C200,73,220,57,240,46.7C260,37,280,33,300,41.7C320,50,340,70,360,76.7C380,83,400,77,420,61.7C440,47,460,23,480,23.3C500,23,520,47,540,53.3C560,60,580,50,600,40C620,30,640,20,660,28.3C680,37,700,63,720,73.3C740,83,760,77,780,66.7C800,57,820,43,840,41.7C860,40,880,50,900,45C920,40,940,20,960,23.3C980,27,1000,53,1020,68.3C1040,83,1060,87,1080,75C1100,63,1120,37,1140,28.3C1160,20,1180,30,1200,41.7C1220,53,1240,67,1260,60C1280,53,1300,27,1320,20C1340,13,1360,27,1380,36.7C1400,47,1420,53,1430,56.7L1440,60L1440,100L1430,100C1420,100,1400,100,1380,100C1360,100,1340,100,1320,100C1300,100,1280,100,1260,100C1240,100,1220,100,1200,100C1180,100,1160,100,1140,100C1120,100,1100,100,1080,100C1060,100,1040,100,1020,100C1000,100,980,100,960,100C940,100,920,100,900,100C880,100,860,100,840,100C820,100,800,100,780,100C760,100,740,100,720,100C700,100,680,100,660,100C640,100,620,100,600,100C580,100,560,100,540,100C520,100,500,100,480,100C460,100,440,100,420,100C400,100,380,100,360,100C340,100,320,100,300,100C280,100,260,100,240,100C220,100,200,100,180,100C160,100,140,100,120,100C100,100,80,100,60,100C40,100,20,100,10,100L0,100Z">
+            </path>
+        </svg>
+    </div>
     <!-- CONTENIDO -->
 
 

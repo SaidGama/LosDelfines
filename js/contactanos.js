@@ -63,7 +63,7 @@ btnEnviar.addEventListener("click", function(event){
         alertError.style.display="block";
         // alertErrorTexto.innerHTML="Escribe un mensa válido"
     }else{
-        campTelefono.style.border="solid thin green";
+        campMensaje.style.border="solid thin green";
     }
     Nombre += "</ul>";
     alertErrorTexto.insertAdjacentHTML("beforeend", Nombre);
@@ -116,12 +116,13 @@ function validarCorreo() {
 
 //if campo telefono //parsein de 10 numeros
 function validarNum (){
-    if (campTelefono.value.length<10 || campTelefono.value.length>10){
-        campTelefono.style.border="solid thin red";   
-    }else{
-        campTelefono.style.border="solid thin green"; 
+    if (/^(?!.*(.)\1{4})\d{10}$/.test(campTelefono.value) == false) {
+        campTelefono.style.border = "solid thin red";
+        return false;
+    } else {
+        campTelefono.style.border = "solid thin green";
         return true;
-    }
+    }// if else
 }//validar telefono
 
 function validarCampo (){

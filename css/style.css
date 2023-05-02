@@ -51,6 +51,11 @@ a {
         color: black;
         transition: .78s;
         
+        
+      }
+    .navbar-toggler-icon {
+        display: block;
+        margin: 0 auto;
       }
     .navbar {
         display: grid;
@@ -106,13 +111,13 @@ a {
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
-            'imagenportada'
+            'olas'
             'footer1';
         gap: 0px;
         height: auto;
     }
-    .imagenportada{
-        grid-area: imagenportada;
+    .olas{
+        grid-area: olas;
         margin-top: -5px;
     }
 
@@ -139,6 +144,9 @@ a {
         display: none;
     }
     .navbar-toggler-icon{
+        display: none;
+    }
+    #myLinks{
         display: none;
     }
 
@@ -198,15 +206,16 @@ a {
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
-            'imagenportada'
+            'olas'
             'footer1';
         gap: 0px;
         height: auto;
     }
-    .imagenportada{
-        grid-area: imagenportada;
+    .olas{
+        grid-area: olas;
         margin-top: -5px;
     }
+    
 
     .footer1 {
         display: grid;
@@ -222,9 +231,6 @@ a {
 
     /* Grid Footer */
 }
-
-
-
 
 
 
