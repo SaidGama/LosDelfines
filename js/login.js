@@ -10,6 +10,8 @@ let nombreValido = true;
 let botonCrear = document.getElementById("botonCrear");
 let alertErrorTextoLogin = document.getElementById("alertErrorTextoLogin");
 let alertErrorLogin = document.getElementById("alertErrorLogin");
+let errorLogin = document.getElementById("errorLogin");
+let errorLoginTexto = document.getElementById("errorLoginTexto");
 let idTimeout;
 let arrayUsuarios = [];
 let correoLogin = document.getElementById("correoLogin");
@@ -58,7 +60,7 @@ botonCrear.addEventListener("click", function (event) {
     alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
     idTimeout = setTimeout(function () {
         alertErrorLogin.style.display = "none";
-    }, 5000);
+    }, 10000);
 
     if (validarNombre() == true && validarCorreo() == true && validarNumero() == true && validarContrasena() == true) {
         let usuario = `{
@@ -71,6 +73,10 @@ botonCrear.addEventListener("click", function (event) {
             arrayUsuarios.push(JSON.parse(usuario));
             localStorage.setItem("arrayUsuarios", JSON.stringify(arrayUsuarios));
         }else{
+            NombreErrores = "<li>Este correo ya está registrado.</li>";
+            alertErrorLogin.style.display = "block";
+            alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
+            correo.style.border= "solid thin red";
             console.log("correo ya registrado");
         }
         
@@ -153,10 +159,6 @@ function validarUsuarioRegistrado(correo) {
     return true;
 }
 
-
-
-
-
 function validarCorreoLogin() {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correoLogin.value) == false) {
         correoLogin.style.border = "solid thin red";
@@ -176,48 +178,27 @@ function validarContrasenaLogin() {
 
 botonIngresar.addEventListener("click", function (event) {
     event.preventDefault();
-    clearTimeout(idTimeout);
-    alertErrorTextoLogin.innerHTML = "";
-    alertErrorLogin.style.display = "none";
-    let NombreErrores = "Los siguientes campos deben ser llenados correctamente:<ul>";
+    errorLoginTexto.innerHTML = "";
+    errorLogin.style.display = "none";
+    let mensajeError = "Los siguientes campos deben ser llenados correctamente:<ul>";
 
-   
-    if (!validarCorreoLogin()) {
-        NombreErrores += "<li>Escribe un correo válido.</li>";
-        alertErrorLogin.style.display = "block";
-    } else {
-        correoLogin.style.border = "solid thin green";
-    }//if validarCorreo
-
-    if (!validarContrasenaLogin()) {
-        NombreErrores += "<li>Escribe una contraseña válida.</li>";
-        alertErrorLogin.style.display = "block";
-    } else {
-        contraseñaLogin.style.border = "solid thin green";
-    }//if validarCorreo
-
-    NombreErrores += "</ul>";
-    alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
-    idTimeout = setTimeout(function () {
-        alertErrorLogin.style.display = "none";
-    }, 5000);
-
-
-    if (validarCorreoLogin() == true && validarContrasenaLogin() == true) {
-        
         if (validarUsuarioLogin(correoLogin.value,contraseñaLogin.value)) {
-                console.log("INICIO DE SESION EXITOSO");
-                window.location.replace("./index.html");
+            console.log("INICIO DE SESION EXITOSO");
+            window.location.replace("./index.html");
 
-                
-        }else{4
-            console.log("USUARIO NO REGISTRADO");
-            correoLogin.style.border = "solid thin red";
-            contraseñaLogin.style.border = "solid thin red";
-        }
-        
-    }//mandar datos de registro
-});
+            
+    }else{
+        mensajeError += "<li>Correo y/o contraseña incorrectos.</li>";
+        errorLogin.style.display = "block";
+        console.log("correo ya registrado");
+
+        correoLogin.style.border = "solid thin red";
+        contraseñaLogin.style.border = "solid thin red";
+    }
+    mensajeError += "</ul>";
+    errorLoginTexto.insertAdjacentHTML("beforeend", mensajeError);
+       
+});//mandar datos de registro
 
 function validarUsuarioLogin(correo,contra) {
     if (localStorage.getItem("arrayUsuarios") != null) {
