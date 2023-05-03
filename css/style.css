@@ -23,7 +23,43 @@ a {
     background-color: #3d71bb;
 
 }
+@media(min-width:350){
+    .carousel{
+        grid-area: carouselExampleControls auto;
+        margin-top: -56px;
+        width: 50%;
+    }
+}
 
+.centrado{
+    font-size: 30 18;
+    font-family: 'Poppins';
+    padding-left: 20;
+}
+
+/*VistaCelular*/
+@media(max-width: 350px) {
+    .compraconproposito {
+        grid-area: compraconproposito;
+        backdrop-filter: blur(49px);
+        background-position: 0%;
+        display: flex;
+        justify-content: center;       
+        font-family: 'Poppins', sans-serif;
+        margin-top: -6%;
+    }
+}
+.logos{
+    font-family:'Poppins' ;
+    align-items: center;
+    padding: 20;
+}
+.grid-container{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
 
 /*VistaCelular*/
 @media(max-width: 899px) {
@@ -120,6 +156,8 @@ a {
         grid-area: olas;
         margin-top: -5px;
     }
+ 
+    
 
     /* footer */
     .footer1 {
@@ -134,7 +172,6 @@ a {
         gap: 0px;
         height: 100%;
     }
-
 }
 
 /*Escritorio*/
