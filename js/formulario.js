@@ -134,7 +134,7 @@ btnCrear.addEventListener("click", function (event) {
     alertErrorTexto.insertAdjacentHTML("beforeend", Nombre);
     idTimeout=setTimeout (function(){
         alertError.style.display="none";
-    }, 5000);
+    }, 10000);
 
 });//btnCrear
 
