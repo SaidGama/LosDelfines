@@ -23,8 +23,54 @@ a {
     background-color: #3d71bb;
 
 }
+@media(min-width:350){
+    .carousel{
+        grid-area: carouselExampleControls auto;
+        margin-top: -56px;
+        width: 50%;
+    }
+}
 
+.centrado{
+    font-size: 30 18;
+    font-family: 'Poppins';
+    padding-left: 20;
+}
 
+/*VistaCelular*/
+@media(max-width: 200px) {
+    .compraconproposito {
+        grid-area: compraconproposito;
+        position: absolute;
+        bottom: 0%;
+        
+    }
+}
+.logos{
+    font-family:'Poppins' ;
+    align-items: center;
+    padding: 20;
+}
+.grid-container{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.productos{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 100px;
+    padding-top: 50px;
+}
+.cajitas{
+    padding: 35px;
+}
+.card-img-top{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 /*VistaCelular*/
 @media(max-width: 899px) {
     .topnav {
@@ -120,6 +166,8 @@ a {
         grid-area: olas;
         margin-top: -5px;
     }
+ 
+    
 
     /* footer */
     .footer1 {
@@ -134,7 +182,6 @@ a {
         gap: 0px;
         height: 100%;
     }
-
 }
 
 /*Escritorio*/
