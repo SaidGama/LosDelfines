@@ -14,7 +14,7 @@ let enlaces = `<a href="./index.html" style="padding-left: 20px;" >Inicio</a>
 let botones = `
             <ul class="lista">
                 <li>
-                    <a href="./login.html"><img src="./img/Vectorlogin.png" alt="login" id="login"></a>
+                    <a href="./login.html"><img src="./img/Vectorlogin.png" alt="login" id="login"  ali: 20px></a>
                 </li>
                 <li>
                     <a href="./CarritoCompras.html"><img src="./img/Vectorcarrito.png" alt="carrito" id="carrito"></a>
