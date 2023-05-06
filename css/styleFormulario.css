@@ -76,15 +76,21 @@ a {
     }
 
     #login {
-        width: 25px;
-        height: 25px;
-        margin: 15%;
+       
+        height: 20px;
+        aspect-ratio: 5/8;
+        object-fit: contain;
+     
     }
 
     #carrito {
-        width: 25px;
-        height: 30px;
+        
+        height: 20px;
+        aspect-ratio: 6/8;
+        object-fit: contain;
+  
     }
+
 
     .menuBoton {
         grid-area: menuBoton;
@@ -96,7 +102,9 @@ a {
 
     .login-container {
         grid-area: login-container;
-        padding-right: 5%;
+    display: grid;
+    place-items: center;
+  
     }
 
     .lista {
@@ -189,15 +197,21 @@ a {
         object-fit: contain;
     }
 
+ 
     #login {
-        width: 30px;
-        height: 50px;
-        padding-bottom: 15px;
+       
+        height: 40px;
+        aspect-ratio: 5/8;
+        object-fit: contain;
+     
     }
 
     #carrito {
-        width: 30px;
+        
         height: 40px;
+        aspect-ratio: 6/8;
+        object-fit: contain;
+  
     }
 
     .grid-container {
