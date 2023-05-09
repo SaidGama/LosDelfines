@@ -21,6 +21,7 @@ let contraseñaLogin = document.getElementById("contraseñaLogin");
 botonCrear.addEventListener("click", function (event) {
     event.preventDefault();
     clearTimeout(idTimeout);
+    alertExito.style.display = "none";
     alertErrorTextoLogin.innerHTML = "";
     alertErrorLogin.style.display = "none";
     let NombreErrores = "Los siguientes campos deben ser llenados correctamente:<ul>";
@@ -79,18 +80,18 @@ botonCrear.addEventListener("click", function (event) {
             alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
             correo.style.border = "solid thin red";
         }
-
+        alertExito.style.display = "block";
         IdNombre.value = "";//Se limpian campos...
         correo.value = "";
         campNumber.value = "";
         contraseña.value = "";
         ConfiContraseña.value = "";
         correoLogin.focus();//se agrega focus al campo del correo del login
-        alertExito.style.display = "block";
-        alertExito.insertAdjacentHTML("beforeend");
+        alertExito.insertAdjacentHTML("beforeend");//Se muestra alerta de éxito
         idTimeout = setTimeout(function () {
             alertExito.style.display = "none";
-        }, 5000); 
+        }, 10000);
+
     }//mandar datos de registro
 });
 function validarNombre() {
