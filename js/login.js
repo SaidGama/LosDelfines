@@ -10,6 +10,7 @@ let nombreValido = true;
 let botonCrear = document.getElementById("botonCrear");
 let alertErrorTextoLogin = document.getElementById("alertErrorTextoLogin");
 let alertErrorLogin = document.getElementById("alertErrorLogin");
+let alertExito = document.getElementById("alertExito");
 let errorLogin = document.getElementById("errorLogin");
 let errorLoginTexto = document.getElementById("errorLoginTexto");
 let idTimeout;
@@ -20,6 +21,7 @@ let contraseñaLogin = document.getElementById("contraseñaLogin");
 botonCrear.addEventListener("click", function (event) {
     event.preventDefault();
     clearTimeout(idTimeout);
+    alertExito.style.display = "none";
     alertErrorTextoLogin.innerHTML = "";
     alertErrorLogin.style.display = "none";
     let NombreErrores = "Los siguientes campos deben ser llenados correctamente:<ul>";
@@ -68,18 +70,28 @@ botonCrear.addEventListener("click", function (event) {
             "correo": "${correo.value}", 
             "campNumber": "${campNumber.value}", 
             "contraseña": "${contraseña.value}"}`;
-            
+
         if (validarUsuarioRegistrado(correo.value)) {
             arrayUsuarios.push(JSON.parse(usuario));
             localStorage.setItem("arrayUsuarios", JSON.stringify(arrayUsuarios));
-        }else{
+        } else {
             NombreErrores = "<li>Este correo ya está registrado.</li>";
             alertErrorLogin.style.display = "block";
             alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
-            correo.style.border= "solid thin red";
-            console.log("correo ya registrado");
+            correo.style.border = "solid thin red";
         }
-        
+        alertExito.style.display = "block";
+        IdNombre.value = "";//Se limpian campos...
+        correo.value = "";
+        campNumber.value = "";
+        contraseña.value = "";
+        ConfiContraseña.value = "";
+        correoLogin.focus();//se agrega focus al campo del correo del login
+        alertExito.insertAdjacentHTML("beforeend");//Se muestra alerta de éxito
+        idTimeout = setTimeout(function () {
+            alertExito.style.display = "none";
+        }, 10000);
+
     }//mandar datos de registro
 });
 function validarNombre() {
@@ -120,8 +132,8 @@ function validarContrasena() {
             ConfiContraseña.style.border = "solid thin red";
         } else {
             ConfiContraseña.style.border = "solid thin green";
+            return true;//Se cambia posición del return para que no regrese tru hasta que ConfiContraseña este correcta
         }
-        return true;
     }//if else
 }//validarContrasena
 
@@ -152,9 +164,9 @@ function validarUsuarioRegistrado(correo) {
         for (let i = 0; i < arrayUsuarios.length; i++) {
             console.log(arrayUsuarios[i]);
             if (arrayUsuarios[i]["correo"].includes(correo)) {
-              return false;
+                return false;
             }
-          }
+        }
     }
     return true;
 }
@@ -182,12 +194,12 @@ botonIngresar.addEventListener("click", function (event) {
     errorLogin.style.display = "none";
     let mensajeError = "Los siguientes campos deben ser llenados correctamente:<ul>";
 
-        if (validarUsuarioLogin(correoLogin.value,contraseñaLogin.value)) {
-            console.log("INICIO DE SESION EXITOSO");
-            window.location.replace("./index.html");
+    if (validarUsuarioLogin(correoLogin.value, contraseñaLogin.value)) {
+        console.log("INICIO DE SESION EXITOSO");
+        window.location.replace("./index.html");
 
-            
-    }else{
+
+    } else {
         mensajeError += "<li>Correo y/o contraseña incorrectos.</li>";
         errorLogin.style.display = "block";
         console.log("correo ya registrado");
@@ -197,16 +209,16 @@ botonIngresar.addEventListener("click", function (event) {
     }
     mensajeError += "</ul>";
     errorLoginTexto.insertAdjacentHTML("beforeend", mensajeError);
-       
+
 });//mandar datos de registro
 
-function validarUsuarioLogin(correo,contra) {
+function validarUsuarioLogin(correo, contra) {
     if (localStorage.getItem("arrayUsuarios") != null) {
         arrayUsuarios = JSON.parse(localStorage.getItem("arrayUsuarios"));
         for (let i = 0; i < arrayUsuarios.length; i++) {
             console.log(arrayUsuarios[i]);
-            if ((arrayUsuarios[i]["correo"] === (correo)) && (arrayUsuarios[i]["contraseña"] === contra) ) {
-              return true;
+            if ((arrayUsuarios[i]["correo"] === (correo)) && (arrayUsuarios[i]["contraseña"] === contra)) {
+                return true;
             }
         }
     }
