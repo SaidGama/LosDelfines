@@ -80,14 +80,13 @@ botonCrear.addEventListener("click", function (event) {
             alertErrorTextoLogin.insertAdjacentHTML("beforeend", NombreErrores);
             correo.style.border = "solid thin red";
         }
-        alertExito.style.display = "block";
+        alertExito.style.display = "block";//Se muestra alerta de éxito
         IdNombre.value = "";//Se limpian campos...
         correo.value = "";
         campNumber.value = "";
         contraseña.value = "";
         ConfiContraseña.value = "";
         correoLogin.focus();//se agrega focus al campo del correo del login
-        alertExito.insertAdjacentHTML("beforeend");//Se muestra alerta de éxito
         idTimeout = setTimeout(function () {
             alertExito.style.display = "none";
         }, 10000);
