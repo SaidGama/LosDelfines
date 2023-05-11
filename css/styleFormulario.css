@@ -77,7 +77,7 @@ a {
 
     #login {
        
-        height: 20px;
+        width: 20px;
         aspect-ratio: 5/8;
         object-fit: contain;
      
@@ -85,11 +85,12 @@ a {
 
     #carrito {
         
-        height: 20px;
+        width: 20px;
         aspect-ratio: 6/8;
         object-fit: contain;
   
     }
+
 
 
     .menuBoton {
