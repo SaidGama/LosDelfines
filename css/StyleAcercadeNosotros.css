@@ -200,7 +200,7 @@ a {
     }
     .imagenportada {
         grid-area: imagenportada;
-        margin-top: -5.6%;
+        margin-top: -6%;
     }
     .columna1 {
         grid-area: columna1;

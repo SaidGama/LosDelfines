@@ -17,7 +17,7 @@ let alertErrorTexto = document.getElementById("alertErrorTexto");
 let idTimeout;
 let html = ""
 //Implementa una función de JavaScript que valide los tipos de entrada y la corrección cuando se presiona el botón Enviar
-
+4
 
 btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
