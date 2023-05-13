@@ -23,6 +23,19 @@ a {
     color: white;
 }
 
+.productos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    margin: 10px;
+}
+.card{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .navbar {
     grid-area: navbar;
     background-color: #3d71bb;
@@ -229,7 +242,7 @@ a {
     }
     .olas{
         grid-area: olas;
-        margin-top: -5px;
+        margin-top: -20px;
     }
     #carouselExampleControls{
         grid-area: carouselExampleControls;
