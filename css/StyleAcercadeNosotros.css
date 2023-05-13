@@ -89,7 +89,12 @@ a {
     grid-area: columna2;
 }
 
-
+.fila1 {
+    grid-area: fila1;
+}
+.fila2 {
+    grid-area: fila2;
+}
 /*VistaCelular*/
 @media(max-width: 899px) {
     .topnav {
@@ -179,7 +184,7 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
         grid-template-columns: auto;
         grid-template-areas:
             'navbar'
@@ -190,6 +195,8 @@ a {
             'tituloEquipo'
             'columna1'
             'columna2'
+            'fila1'
+            'fila2'
             'footer1';
         gap: 0px;
         height: 100%;
@@ -317,7 +324,7 @@ a {
 
     .grid-container {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             'navbar navbar'
@@ -326,7 +333,8 @@ a {
             'articulo1 articulo2'
             'tituloEquipo tituloEquipo'
             'columna1 columna2'
-            'columna1 columna2'
+            'fila1 fila1'
+            'fila2 fila2'
             'footer1 footer1';
     }
     .olas{
@@ -369,7 +377,7 @@ a {
     position:relative;
     width: 300px;
     height: 350px;
-    margin: 20px;
+    margin: 50px;
 }
 .cardTeam .face {
     position:absolute;
