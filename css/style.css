@@ -7,6 +7,11 @@
 body {
     min-height: 100%;
 }
+.centrado{
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 170%;
+}
 
 html {
     height: 100%;
@@ -73,14 +78,13 @@ a {
     }
 
     #login {
-        width: 25px;
-        height: 25px;
+        width: 21px;
         margin: 15%;
     }
 
     #carrito {
-        width: 25px;
-        height: 30px;
+        width: 21px;
+        height: 18px;
     }
 
     .menuBoton {
@@ -190,14 +194,19 @@ a {
     }
 
     #login {
-        width: 30px;
-        height: 50px;
-        padding-bottom: 15px;
+       
+        height: 40px;
+        aspect-ratio: 5/8;
+        object-fit: contain;
+     
     }
 
     #carrito {
-        width: 30px;
+        
         height: 40px;
+        aspect-ratio: 6/8;
+        object-fit: contain;
+  
     }
 
     .grid-container {

@@ -26,6 +26,11 @@ btnCrear.addEventListener("click", function (event) {
     let validacionCampoDescripcionFuction= validacionDescripcion();
     let validacionCampoStockFuction = validacionStock();
     let validacionCampoImagenFuction = validacionImagen();
+    Nombre += "</ul>";
+    alertErrorTexto.insertAdjacentHTML("beforeend", Nombre);
+    idTimeout=setTimeout (function(){
+        alertError.style.display="none";
+    }, 5000);
     if (validacionCampoIDFuction == true && validacionCampoNombreFuction == true && validacionCampoPrecioFuction == true && 
         validacionCampoDescripcionFuction == true
         && validacionCampoStockFuction == true && validacionCampoImagenFuction == true) {
@@ -64,7 +69,7 @@ btnCrear.addEventListener("click", function (event) {
             alertError.style.display="block";
         } else {
             Id.style.border = "solid thin green";
-            
+            return true;
         }//if
     }//validacionCampoID
     
@@ -76,6 +81,7 @@ btnCrear.addEventListener("click", function (event) {
            
         } else {
             campNombre.style.border = "solid thin green";
+            return true;
             
         }//if
     }//validar Nombre
@@ -92,7 +98,7 @@ btnCrear.addEventListener("click", function (event) {
         }
     }//validacionPrecio
     
-
+    
     function validacionDescripcion() {
         if (campDescripcion.value.length < 1 || campDescripcion.value.length > 150) {
             campDescripcion.style.border = "solid thin red";
@@ -129,12 +135,6 @@ btnCrear.addEventListener("click", function (event) {
             return true;  
         }
     }
-
-    Nombre += "</ul>";
-    alertErrorTexto.insertAdjacentHTML("beforeend", Nombre);
-    idTimeout=setTimeout (function(){
-        alertError.style.display="none";
-    }, 10000);
 
 });//btnCrear
 

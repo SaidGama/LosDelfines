@@ -66,30 +66,38 @@
         <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertErrorLogin">
             <p id="alertErrorTextoLogin"> </p>
         </div>
+        <div class="alert alert-success" style="display:none;" role="alert" id="alertExito"><!--Se agrega Alert de registro exitoso-->
+            <h4 class="alert-heading">¡Fantástico!</h4>
+            <p>¡Tu registro se ha realizado con éxito!</p>
+            <hr>
+            <p class="mb-0">Ahora inicia sesión y comienza a disfrutar de una maravillosa experiencia</p>
+        </div>
         <form class="col">
             <div class="row-md-6">
                 <br>
-                <label class="form-label">Nombre completo</label>
+                <label class="form-label">Nombre completo:</label>
                 <input type="text" class="form-control" id="IdNombre">
             </div>
 
             <div class="row-md-6">
                 <br>
-                <label class="form-label">Correo</label>
-                <input type="text" class="form-control" id="Correo">
+                <label class="form-label">Correo:</label>
+                <input type="text" class="form-control" placeholder="ejemplo@dominio.com" id="Correo">
             </div>
 
             <div class="row-md-6" style="padding-top: 25px;">
-                <label class="form-label">Numero de teléfono</label>
-                <input type="input" class="form-control" id="campNumber">
+                <label class="form-label">Número de teléfono:</label>
+                <input type="input" class="form-control" placeholder="ejem.5556575859" id="campNumber">
             </div>
 
             <div class="row-md-6" style="padding-top: 25px;">
-                <label class="form-label">Contraseña</label>
+                <label class="form-label">Contraseña:</label>
                 <input type="password" class="form-control" id="Contraseña">
+                <div id="emailHelp" class="form-text">Tu contraseña debe tener al menos:<br>*Una mayúscula.<br>*Una
+                    minúscula.<br>*Un número.<br>*Mínimo 8 caracteres.</div>
             </div>
             <div class="row-md-6" style="padding-top: 25px;">
-                <label class="form-label">Confirmar tu contraseña</label>
+                <label class="form-label">Confirmar tu contraseña:</label>
                 <input type="password" class="form-control" id="ConfiContraseña">
             </div>
             <!-- <div class="row-md-6" style="padding-top: 25px;">
@@ -106,17 +114,17 @@
         <div class="shadow p-3 mb-5 bg-white rounded">
             <h2 class="ingr">INGRESAR</h2>
             <br>
-            <label class="form-label">Correo</label>
+            <label class="form-label">Correo:</label>
             <input type="email" class="form-control" placeholder="Ingresa tu correo" id="correoLogin">
             <div class="contraseña">
-                <label class="form-label" style="padding-top: 25px;">Contraseña</label>
-                <input type="password" class="form-control" placeholder="contraseña" id="contraseñaLogin">
-                <p class="ingr" style="padding-top: 10px;">¿OLVIDASTE TU CONTRASEÑA
-                <p>
+                <label class="form-label" style="padding-top: 25px;">Contraseña:</label>
+                <input type="password" class="form-control" placeholder="Contraseña" id="contraseñaLogin">
+                <p class="ingr" style="padding-top: 10px;">¿Olvidaste tu contraseña?</p>
                 <div class="col-12">
                     <button type="add" class="btn btn-primary" id="botonIngresar">INGRESAR</button>
                 </div>
-                <div class="alert alert-danger fade show" style="display: none; padding: 10px;" role="alert" id="errorLogin">
+                <div class="alert alert-danger fade show" style="display: none; padding: 10px;" role="alert"
+                    id="errorLogin">
                     <p id="errorLoginTexto"> </p>
                 </div>
             </div>
