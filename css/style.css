@@ -22,6 +22,11 @@ a {
     text-decoration: none;
     color: white;
 }
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 
 .productos{
     display: grid;
@@ -34,6 +39,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.venta{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .navbar {
