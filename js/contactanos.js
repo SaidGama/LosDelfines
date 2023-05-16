@@ -6,6 +6,7 @@ let campNombre = document.getElementById("campNombre");
 let btnEnviar = document.getElementById("btnEnviar");
 let ValidaBoton = document.getElementById("ValidaBoton");
 let validacionTexto = document.getElementById("validacionTexto");
+let btnClear = document.getElementById("Limpiar");
 //const regex = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm;
 let esvalido = true;
 let esvalidoCorreo = true;
@@ -16,7 +17,7 @@ let alertErrorTexto = document.getElementById("alertErrorTexto");
 let idTimeout;
 let html = ""
 //Implementa una función de JavaScript que valide los tipos de entrada y la corrección cuando se presiona el botón Enviar
-
+4
 
 btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
@@ -69,19 +70,12 @@ btnEnviar.addEventListener("click", function(event){
     alertErrorTexto.insertAdjacentHTML("beforeend", Nombre);
     idTimeout=setTimeout (function(){
         alertError.style.display="none";
+        ValidaBoton.style.display="none";
     }, 5000);
 
  //btnlimpiar click
-btnClear.addEventListener("click",function(event){
-    event.preventDefault();
-    campNombre.value="";
-    campEmail.value="";
-    campTelefono.value="";
-    campMensaje.value="";
-});//btn limpiar
 
    if (validarCorreo()==true && validarNum()== true && validarCampo()==true && esvalidoNombre == true){
-    console.log("ok! lo logramos");
 
     
     Email.send({
@@ -102,6 +96,10 @@ btnClear.addEventListener("click",function(event){
 function mostrarValidacion(){
     ValidaBoton.style.display="block";
     validacionTexto.insertAdjacentHTML("afterend", html);
+    campNombre.value="";
+    campEmail.value="";
+    campTelefono.value="";
+    campMensaje.value="";
 }
 
 function validarCorreo() {
@@ -133,6 +131,15 @@ function validarCampo (){
         return true;
     }
 }
+
+btnClear.addEventListener("click",function(event){
+    event.preventDefault();
+    campNombre.value="";
+    campEmail.value="";
+    campTelefono.value="";
+    campMensaje.value="";
+});//btn limpiar
+
 campMensaje.addEventListener("blur", function(event){
     event.preventDefault();
     campMensaje.value = campMensaje.value.trim();
