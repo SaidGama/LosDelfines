@@ -223,3 +223,7 @@ function validarUsuarioLogin(correo, contra) {
     }
     return false;
 }
+
+function mensajeInicio(nombreUsuario){
+    let mensaje = '¡Bienvenido, ${nombreUsuario}!'
+}
