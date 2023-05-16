@@ -22,7 +22,21 @@ a {
     text-decoration: none;
     color: white;
 }
-
+.slide{
+    margin-top: 10px;
+}
+.slide img {
+    height: 70vh;
+    width: 100%;
+}
+.contenedor{
+    height: 750px;
+    width: 100%;
+    padding: 0px;
+}
+.contenedor{
+    width: 100%;
+}
 
 .productos{
     display: grid;
