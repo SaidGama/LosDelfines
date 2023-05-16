@@ -17,6 +17,8 @@ let idTimeout;
 let arrayUsuarios = [];
 let correoLogin = document.getElementById("correoLogin");
 let contraseñaLogin = document.getElementById("contraseñaLogin");
+let alertInicioSesion = document.getElementById("alertInicioSesion");
+let inicioSesionTexto = document.getElementById("inicioSesionTexto");
 
 botonCrear.addEventListener("click", function (event) {
     event.preventDefault();
@@ -192,10 +194,18 @@ botonIngresar.addEventListener("click", function (event) {
     errorLoginTexto.innerHTML = "";
     errorLogin.style.display = "none";
     let mensajeError = "Los siguientes campos deben ser llenados correctamente:<ul>";
-
+    clearTimeout(idTimeout);
     if (validarUsuarioLogin(correoLogin.value, contraseñaLogin.value)) {
+        let sesion = obtenerUsuario(correoLogin.value);
+        if(sesion){
         console.log("INICIO DE SESION EXITOSO");
-        window.location.replace("./index.html");
+        alertInicioSesion.style.display="block";
+        inicioSesionTexto.insertAdjacentHTML("beforeend", mensajeInicio(sesion.IdNombre));
+        idTimeout = setTimeout(function () {
+            window.location.replace("./index.html");
+        }, 1500);
+        
+        }
 
 
     } else {
@@ -224,6 +234,19 @@ function validarUsuarioLogin(correo, contra) {
     return false;
 }
 
+function obtenerUsuario(correo) {
+    if (localStorage.getItem("arrayUsuarios") != null) {
+      arrayUsuarios = JSON.parse(localStorage.getItem("arrayUsuarios"));
+      for (let i = 0; i < arrayUsuarios.length; i++) {
+        if (arrayUsuarios[i].correo === correo) {
+          return arrayUsuarios[i];
+        }
+      }
+    }
+    return null;
+  }//obtener usuario especifico con el correo
+
 function mensajeInicio(nombreUsuario){
-    let mensaje = '¡Bienvenido, ${nombreUsuario}!'
-}
+    const mensaje = `¡Bienvenido, ${nombreUsuario}!`;
+    return mensaje;
+}//aquí se pone el mensaje mas el nombre del usuario
