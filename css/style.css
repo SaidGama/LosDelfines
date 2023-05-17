@@ -3,6 +3,9 @@
     padding: 0;
     margin: 0;
 }
+.card{
+    text-align: center;
+}
 
 body{
     background: #f7f7f7;
