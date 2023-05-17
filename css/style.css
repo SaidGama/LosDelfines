@@ -3,7 +3,14 @@
     padding: 0;
     margin: 0;
 }
-
+*{
+    margin: 0;
+  }
+  
+  body{
+    background: #f7f7f7;
+  }
+  
 body {
     min-height: 100%;
 }
@@ -22,17 +29,7 @@ a {
     text-decoration: none;
     color: white;
 }
-.carousel{
-    object-fit: cover;
-    margin: 22px;
-    position: relative;
-    z-index: -1;
-}
-.carousel img{
-    max-width: 100%;
-    max-height: 65vh;
-    
-}
+
 
 .productos{
     display: grid;
