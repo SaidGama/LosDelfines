@@ -10,7 +10,7 @@ body {
 
 html {
     height: 100%;
-    font-family:'Poppins';
+    font-family: 'Poppins';
 }
 
 a {
@@ -23,7 +23,7 @@ a {
     background-color: #3d71bb;
 }
 
-.cont{
+.cont {
     grid-area: contenido;
 }
 
@@ -41,35 +41,38 @@ a {
         justify-content: center;
         margin-top: -6%;
     }
+
     .topnav {
         background-color: #3d71bb;
         grid-area: topnav;
         height: 0;
     }
-      
-      .topnav #myLinks {
+
+    .topnav #myLinks {
         display: none;
-      }
-      
-      .topnav a {
+    }
+
+    .topnav a {
         color: white;
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
         display: block;
-        text-align: center; 
-      }
-      
-      .topnav a:hover {
+        text-align: center;
+    }
+
+    .topnav a:hover {
         background-color: #ddd;
         color: black;
         transition: .78s;
-        
-      }
-      .navbar-toggler-icon {
+
+    }
+
+    .navbar-toggler-icon {
         display: block;
         margin: 0 auto;
-      }
+    }
+
     .navbar {
         display: grid;
         grid-template-rows: auto auto;
@@ -77,8 +80,9 @@ a {
         grid-template-areas:
             'menuBoton img-container login-container'
             'topnav     topnav       topnav';
-        height: auto;    
+        height: auto;
     }
+
     .logoDelfin {
         width: 100%;
         height: 100%;
@@ -86,19 +90,19 @@ a {
     }
 
     #login {
-       
+
         width: 20px;
         aspect-ratio: 5/8;
         object-fit: contain;
-     
+
     }
 
     #carrito {
-        
+
         width: 20px;
         aspect-ratio: 6/8;
         object-fit: contain;
-  
+
     }
 
 
@@ -112,9 +116,9 @@ a {
 
     .login-container {
         grid-area: login-container;
-    display: grid;
-    place-items: center;
-  
+        display: grid;
+        place-items: center;
+
     }
 
     .lista {
@@ -138,23 +142,27 @@ a {
         gap: 0px;
         height: 100%;
     }
-    .olas{
+
+    .olas {
         grid-area: olas;
         margin-top: -5px;
         z-index: 1;
     }
+
     /* footer */
     .footer1 {
-        display: grid; 
+        display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-         'col2 col3'
-         'col4 col5';
-        
+        grid-template-areas:
+            'col2 col3'
+            'col4 col5';
+
         gap: 0px;
         height: 100%;
-    } /* Grid Footer */      
+    }
+
+    /* Grid Footer */
 }
 
 /*Escritorio*/
@@ -171,27 +179,33 @@ a {
         justify-content: center;
         margin-top: -6%;
     }
+
     .navbar-toggler {
         display: none;
     }
-    .navbar-toggler-icon{
+
+    .navbar-toggler-icon {
         display: none;
     }
-    #myLinks{
+
+    #myLinks {
         display: none;
     }
-    .navbar-toggler{
+
+    .navbar-toggler {
         display: none;
     }
-    .navbar{
+
+    .navbar {
         display: grid;
-        grid-template-rows:60% 40%;
+        grid-template-rows: 60% 40%;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
-        grid-template-areas: 
-        '. img-container img-container img-container login-container'
-        '. enlaces-container enlaces-container enlaces-container login-container';
+
+        grid-template-areas:
+            '. img-container img-container img-container login-container'
+            '. enlaces-container enlaces-container enlaces-container login-container';
     }
+
     /* CSS NAVBAR */
     .img-container {
         grid-area: img-container;
@@ -220,19 +234,19 @@ a {
     }
 
     #login {
-       
+
         height: 40px;
         aspect-ratio: 6/8;
         object-fit: contain;
-     
+
     }
 
     #carrito {
-        
+
         height: 40px;
         aspect-ratio: 6/8;
         object-fit: contain;
-  
+
     }
 
     .grid-container {
@@ -246,13 +260,14 @@ a {
             'contenido contenido'
             'footer1 footer1';
         gap: 0px;
-        height: 100%;
     }
-    .olas{
+
+    .olas {
         grid-area: olas;
         margin-top: -5px;
         z-index: 1;
     }
+
     .footer1 {
         display: grid;
         grid-template-rows: 1fr;
@@ -263,157 +278,146 @@ a {
         gap: 0px;
         height: 100%;
 
-    }    /* Grid Footer */
+    }
+
+    /* Grid Footer */
 }
+
 /*==================CSS CONTENIDO========================*/
-.cont{
-    font-family: 'Poppins', sans-serif;
-}
-.contenedor{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-.bg_animate{
+.cont {
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(to right,white, #3d71bb);
+    justify-content: center;
+    align-items: center;
+}
+
+.bg_animate {
+    width: 100%;
+    background: linear-gradient(to right, white, #3d71bb);
     position: relative;
     overflow: hidden;
 }
-.contenedor{
+
+.card1 {
     display: flex;
-    justify-content: space-between;
+    background: linear-gradient(to right , #3d71bb, white);;
+    margin: 10px;
+    justify-content: center;
     align-items: center;
-    padding: 15px;
+    border-radius: 20px;
+    font-family:'Poppins', sans-serif;
 }
-h1{
-    color: #3d71bb;
-    font-family: 'Poppins';
-    font-size: 60px;
-}
-.banner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-.banner_title h2{
-    width: 100%;
-    color: black;
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-.banner_title .dirige{
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    background: blue;
-}
-.banner_img img{
-    width: 350px;
-    display: block;
-}
+
 /*burbujas*/
-.burbuja{
+.burbuja {
     border-radius: 50%;
-    background:#fff;
+    background: #fff;
     opacity: .3;
 
-    position: absolute;
-    bottom: -150;
+    position:absolute;
 
-    animation: burbujas 3s linear infinite;
+    animation: burbujas 9s linear infinite;
 }
-.burbuja:nth-child(1){
+
+.burbuja:nth-child(1) {
     width: 80px;
     height: 80px;
     left: 5%;
     animation-duration: 3s;
     animation-delay: 3s;
 }
-.burbuja:nth-child(2){
+
+.burbuja:nth-child(2) {
     width: 100px;
     height: 100px;
     left: 35%;
     animation-duration: 3s;
     animation-delay: 5s;
 }
-.burbuja:nth-child(3){
+
+.burbuja:nth-child(3) {
     width: 20px;
     height: 20px;
     left: 15%;
     animation-duration: 1.5s;
     animation-delay: 7s;
 }
-.burbuja:nth-child(4){
+
+.burbuja:nth-child(4) {
     width: 50px;
     height: 50px;
     left: 90%;
     animation-duration: 6s;
     animation-delay: 3s;
 }
-.burbuja:nth-child(5){
+
+.burbuja:nth-child(5) {
     width: 70px;
     height: 70px;
     left: 65%;
     animation-duration: 3s;
     animation-delay: 1s;
 }
-.burbuja:nth-child(6){
+
+.burbuja:nth-child(6) {
     width: 30px;
     height: 30px;
     left: 50%;
     animation-duration: 4s;
     animation-delay: 5s;
 }
-.burbuja:nth-child(7){
+
+.burbuja:nth-child(7) {
     width: 25px;
     height: 25px;
     left: 60%;
     animation-duration: 3.5s;
     animation-delay: 5.5s;
 }
-.burbuja:nth-child(8){
+
+.burbuja:nth-child(8) {
     width: 98px;
     height: 98px;
     left: 52%;
     animation-duration: 5s;
     animation-delay: 6s;
 }
-.burbuja:nth-child(9){
+
+.burbuja:nth-child(9) {
     width: 65px;
     height: 65px;
     left: 48%;
     animation-duration: 3.3s;
     animation-delay: 2s;
 }
-.burbuja:nth-child(10){
+
+.burbuja:nth-child(10) {
     width: 40px;
     height: 40px;
     left: 29%;
     animation-duration: 3s;
     animation-delay: 4s;
 }
-@keyframes burbujas{
-    0%{
+
+@keyframes burbujas {
+    0% {
         bottom: 0;
         opacity: 0;
     }
-    30%{
+
+    30% {
         transform: translateX(30px);
     }
-    50%{
+
+    50% {
         opacity: .4;
     }
-    100%{
+
+    100% {
         bottom: 100vh;
         opacity: 0;
     }
 }
+
 /*==================CSS FOOTER========================*/
 .bg-footer {
     background-color: #3D71BB;
