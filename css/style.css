@@ -35,7 +35,7 @@ a {
 
 @keyframes animate {
     0% {
-        background-position: left 0px top 60px;
+        background-position: left 0px top 130px;
     }
 
     40% {
@@ -156,17 +156,20 @@ a {
         grid-area: texto1;
         align-items: center;
         text-align: center;
-        padding: 80px;
+        padding: 20px;
     }
     .loader h1 {
-        font-size: 60px; /* Cambia el tamaño de letra según tus necesidades */
+        font-size: 40px; /* Cambia el tamaño de letra según tus necesidades */
+    }
+    .h2texto1{
+        font-size: 20px;
     }
     .card1 {
         display: flex;
         justify-content: center;
         align-items: center;
         height: auto; /* O ajusta la altura según tus necesidades */
-        padding: 80px;
+        padding: 20px;
     }
     .card.mb-3 {
         width: 100%;
@@ -174,7 +177,7 @@ a {
     }
     .productosDestacados{
         grid-area: productosDestacados;
-        padding: 80px;
+        padding: 20px;
     }
 
     #carouselExampleControls{
@@ -327,10 +330,9 @@ a {
 }
 
 
-
 .container {
   position: relative;
-  width: 1160px;
+  width: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
