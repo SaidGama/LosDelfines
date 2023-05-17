@@ -261,7 +261,7 @@ a {
         grid-template-areas:
             'navbar'
             'olas'
-            'carouselExampleControls'
+            'carousel'
             'footer1';
         gap: 0px;
         height: auto;
@@ -270,9 +270,8 @@ a {
         grid-area: olas;
         margin-top: -20px;
     }
-    #carouselExampleControls{
-        grid-area: carouselExampleControls;
-        margin-top: -50px;
+    .carousel{
+        grid-area: carousel;
     }
 
     .footer1 {
