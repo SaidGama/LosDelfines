@@ -22,20 +22,16 @@ a {
     text-decoration: none;
     color: white;
 }
-.slide{
-    margin-top: 10px;
+.carousel{
+    object-fit: cover;
+    margin: 22px;
+    position: relative;
+    z-index: -1;
 }
-.slide img {
-    height: 70vh;
-    width: 100%;
-}
-.contenedor{
-    height: 750px;
-    width: 100%;
-    padding: 0px;
-}
-.contenedor{
-    width: 100%;
+.carousel img{
+    max-width: 100%;
+    max-height: 65vh;
+    
 }
 
 .productos{
@@ -51,8 +47,22 @@ a {
     align-items: center;
 }
 .venta{
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-area: 'icono-1' 'icono-2' 'icono-3';
+}
+
+.compraconproposito{
+    height: 500px;
+    width: auto;
+    margin: 22px;
+}
+.compraconproposito img{
+    width: 100%;
+    height: 500px;
 }
 
 .navbar {
@@ -155,12 +165,12 @@ a {
     }
     .olas{
         grid-area: olas;
-        margin-top: -5px;
+        margin-top: -1px;
     }
 
     #carouselExampleControls{
         grid-area: carouselExampleControls;
-        margin-top: -30px;
+        margin-top: -8px;
     }
 
     /* footer */
