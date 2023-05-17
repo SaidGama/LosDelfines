@@ -196,19 +196,9 @@ botonIngresar.addEventListener("click", function (event) {
     let mensajeError = "Los siguientes campos deben ser llenados correctamente:<ul>";
     clearTimeout(idTimeout);
     if (validarUsuarioLogin(correoLogin.value, contraseñaLogin.value)) {
-        let sesion = obtenerUsuario(correoLogin.value);
-        if(sesion){
         console.log("INICIO DE SESION EXITOSO");
-        alertInicioSesion.style.display="block";
-        inicioSesionTexto.insertAdjacentHTML("beforeend", mensajeInicio(sesion.IdNombre));
-        idTimeout = setTimeout(function () {
-            window.location.replace("./index.html");
-        }, 1500);
-        
-        }
-
-
-    } else {
+        window.location.replace("./loading.html");
+    }else {
         mensajeError += "<li>Correo y/o contraseña incorrectos.</li>";
         errorLogin.style.display = "block";
         console.log("correo ya registrado");
