@@ -232,6 +232,21 @@ a {
 
 
     }
+    .articulo1 {
+        grid-area: articulo1;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: justify;
+    }
+    
+    
+    .articulo2 {
+        grid-area: articulo2;
+        padding-left: 10%;
+        padding-right: 10%;
+        width: auto;
+        height: auto;
+    }
 }
 
 
